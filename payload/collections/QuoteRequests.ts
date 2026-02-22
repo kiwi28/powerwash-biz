@@ -99,19 +99,6 @@ export const QuoteRequests: CollectionConfig = {
       ],
     },
     {
-      name: 'photos',
-      type: 'array',
-      label: 'Fotografii',
-      fields: [
-        {
-          name: 'photo',
-          type: 'upload',
-          relationTo: 'media',
-          required: true,
-        },
-      ],
-    },
-    {
       name: 'notes',
       type: 'textarea',
       label: 'Alte Detalii',

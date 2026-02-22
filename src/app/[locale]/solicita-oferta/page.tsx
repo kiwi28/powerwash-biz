@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { QuoteForm } from '../../../QuoteForm';
+import { QuoteForm } from '@/components/QuoteForm';
 
 export default async function QuoteRequestPage() {
   const t = await getTranslations('quoteRequest');

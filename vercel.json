@@ -1,0 +1,30 @@
+{
+  "buildCommand": "pnpm build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "env": {
+    "PAYLOAD_SECRET": "@payload_secret",
+    "DATABASE_URL": "@database_url",
+    "RESEND_API_KEY": "@resend_api_key",
+    "ADMIN_EMAIL": "@admin_email",
+    "FROM_EMAIL": "@from_email",
+    "NEXT_PUBLIC_SITE_URL": "@site_url"
+  },
+  "build": {
+    "env": {
+      "PAYLOAD_SECRET": "@payload_secret",
+      "DATABASE_URL": "@database_url"
+    }
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, max-age=0"
+        }
+      ]
+    }
+  ]
+}

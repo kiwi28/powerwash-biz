@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "WebSearch",
-      "Bash(git -C /home/alexkiwi/projects/personal/agentic-next-payloadcms status)"
+      "Bash(git -C /home/alexkiwi/projects/personal/agentic-next-payloadcms status)",
+      "Bash(pnpm build 2>&1 | head -100)",
+      "Bash(pnpm build 2>&1 | head -150)",
+      "Bash(pnpm build 2>&1 | tail -100)",
+      "Bash(pnpm build 2>&1 | tail -150)",
+      "Bash(pnpm build 2>&1 | tail -50)"
     ]
   }
 }

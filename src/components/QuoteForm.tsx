@@ -29,20 +29,12 @@ const quoteFormSchema = zod.object({
     .regex(/^(07[0-9]{8}|\+407[0-9]{8})$/, { message: 'Numărul de telefon trebuie să fie un număr valid din România' }),
   email: zod.string().email({ message: 'Email-ul trebuie să fie valid' }),
   address: zod.string().min(5, { message: 'Adresa trebuie să aibă cel puțin 5 caractere' }),
-  serviceType: zod.enum(['curatare-alei', 'curatare-pereti', 'curatare-terase', 'curatare-fatada', 'alta'], {
-    required_error: 'Alegeți tipul de serviciu',
-  }),
+  serviceType: zod.enum(['curatare-alei', 'curatare-pereti', 'curatare-terase', 'curatare-fatada', 'alta']),
   surfaceArea: zod.string().min(1, { message: 'Suprafața este obligatorie' }),
-  surfaceType: zod.enum(['beton', 'pietra', 'lemn', 'gips', 'alta'], {
-    required_error: 'Alegeți tipul de suprafață',
-  }),
+  surfaceType: zod.enum(['beton', 'pietra', 'lemn', 'gips', 'alta']),
   preferredDate: zod.string().min(1, { message: 'Data preferată este obligatorie' }),
-  preferredTime: zod.enum(['dimineata', 'pranz', 'dupa-amiaza'], {
-    required_error: 'Alegeți ora preferată',
-  }),
-  urgency: zod.enum(['normala', 'urgenta', 'foarte-urgenta'], {
-    required_error: 'Alegeți nivelul de urgență',
-  }),
+  preferredTime: zod.enum(['dimineata', 'pranz', 'dupa-amiaza']),
+  urgency: zod.enum(['normala', 'urgenta', 'foarte-urgenta']),
   notes: zod.string().optional(),
 });
 

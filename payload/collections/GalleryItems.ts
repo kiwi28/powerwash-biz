@@ -13,20 +13,6 @@ export const GalleryItems: CollectionConfig = {
   },
   fields: [
     {
-      name: 'beforeImage',
-      type: 'upload',
-      relationTo: 'media',
-      required: true,
-      label: 'Imagine Înainte',
-    },
-    {
-      name: 'afterImage',
-      type: 'upload',
-      relationTo: 'media',
-      required: true,
-      label: 'Imagine După',
-    },
-    {
       name: 'category',
       type: 'select',
       required: true,
