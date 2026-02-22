@@ -7,7 +7,25 @@
       "Bash(pnpm build 2>&1 | head -150)",
       "Bash(pnpm build 2>&1 | tail -100)",
       "Bash(pnpm build 2>&1 | tail -150)",
-      "Bash(pnpm build 2>&1 | tail -50)"
+      "Bash(pnpm build 2>&1 | tail -50)",
+      "Bash(ls -la app/\\\\[locale\\\\]/)",
+      "Bash(ls -la src/app/\\\\[locale\\\\]/ 2>/dev/null || echo \"Directory not found\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000 2>/dev/null || echo \"Server not running\")",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "Bash(npx playwright install chrome)",
+      "Bash(pnpm dev)",
+      "Bash(sleep 8 && curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(sleep 2 && curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/ro)",
+      "Bash(sleep 3 && curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/ro)",
+      "Bash(sleep 10 && curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/ro)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/ro/servicii)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/test)",
+      "Bash(sleep 8 && curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/ro)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/ro)",
+      "Bash(curl -I http://localhost:3000/ro 2>/dev/null | head -10)",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "Bash(ls -la app/\\\\[locale\\\\]/admin/)"
     ]
   }
 }

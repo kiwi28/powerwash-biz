@@ -1,0 +1,48 @@
+[    1993ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/solicita-oferta:0
+[    2137ms] Error: Couldn't find next-intl config file. Please follow the instructions at https://next-intl.dev/docs/getting-started/app-router
+    at QuoteRequestPage (about://React/Server/file:///home/alexkiwi/projects/personal/agentic-next-payloadcms/.next/dev/server/chunks/ssr/%5Broot-of-the-server%5D__7a2cd6db._.js?6:70:509)
+    at resolveErrorDev (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:1894:148)
+    at processFullStringRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2402:29)
+    at processFullBinaryRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2361:9)
+    at processBinaryChunk (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2470:221)
+    at progress (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2640:13)
+[    5244ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/solicita-oferta:0
+[   17304ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/solicita-oferta:0
+[   17538ms] Error: Failed to call `useTranslations` because the context from `NextIntlClientProvider` was not found.
+
+This can happen because:
+1) You intended to render this component as a Server Component, the render
+   failed, and therefore React attempted to render the component on the client
+   instead. If this is the case, check the console for server errors.
+2) You intended to render this component on the client side, but no context was found.
+   Learn more about this error here: https://next-intl.dev/docs/environments/server-client-components#missing-context
+    at http://localhost:3000/_next/static/chunks/node_modules__pnpm_05b9c32c._.js:12520:19
+    at QuoteForm (http://localhost:3000/_next/static/chunks/components_cef547c7._.js:917:440)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:14826:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:4651:24)
+    at updateFunctionComponent (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:6112:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:6687:639)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9562:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9456:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9440:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9105:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_20ef5bc4._.js:2647:64)
+[   20594ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/solicita-oferta:0
+[   29407ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:2297
+[   29741ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/solicita-oferta:0
+[   29915ms] ReferenceError: useTranslations is not defined
+    at QuoteForm (http://localhost:3000/_next/static/chunks/components_cef547c7._.js:917:15)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:14826:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:4651:24)
+    at updateFunctionComponent (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:6112:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:6687:639)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9562:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9456:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9440:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9105:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_20ef5bc4._.js:2647:64)
+[   32946ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/solicita-oferta:0

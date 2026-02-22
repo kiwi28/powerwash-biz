@@ -115,7 +115,7 @@ const galleryItems = [
 ];
 
 export default async function LandingPage() {
-  const t = await getTranslations('hero');
+  // const t = await getTranslations('hero');
 
   return (
     <>

@@ -1,0 +1,545 @@
+[     131ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/:0
+[ 5968117ms] [ERROR] ./app/[locale]/layout.tsx:6:1
+Module not found: Can't resolve '@/components/Footer'
+  4 | import { getMessages } from 'next-intl/server';
+  5 | import Header from '@/components/Header';
+> 6 | import Footer from '@/components/Footer';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export function generateStaticParams() {
+  9 |   return locales.map((locale) => ({ locale }));
+
+Import map: aliased to relative './components/Footer' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[ 5968117ms] [ERROR] ./app/[locale]/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Header'
+  3 | import { locales } from '@/i18n';
+  4 | import { getMessages } from 'next-intl/server';
+> 5 | import Header from '@/components/Header';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import Footer from '@/components/Footer';
+  7 |
+  8 | export function generateStaticParams() {
+
+Import map: aliased to relative './components/Header' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[ 5968117ms] [ERROR] ./app/[locale]/page.tsx:2:1
+Module not found: Can't resolve '@/components/Hero'
+  1 | import { getTranslations } from 'next-intl/server';
+> 2 | import { Hero } from '@/components/Hero';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { ServiceCard } from '@/components/ServiceCard';
+  4 | import { Card, CardContent } from '@/components/ui/card';
+  5 | import { Button } from '@/components/ui/button';
+
+Import map: aliased to relative './components/Hero' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[ 5968117ms] [ERROR] ./app/[locale]/page.tsx:3:1
+Module not found: Can't resolve '@/components/ServiceCard'
+  1 | import { getTranslations } from 'next-intl/server';
+  2 | import { Hero } from '@/components/Hero';
+> 3 | import { ServiceCard } from '@/components/ServiceCard';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { Card, CardContent } from '@/components/ui/card';
+  5 | import { Button } from '@/components/ui/button';
+  6 | import { Shield, Clock, Award, Users, Zap, Search, FileText, Phone } from 'lucide-react';
+
+Import map: aliased to relative './components/ServiceCard' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[ 5968118ms] [ERROR] ./app/[locale]/page.tsx:8:1
+Module not found: Can't resolve '@/components/TestimonialCard'
+   6 | import { Shield, Clock, Award, Users, Zap, Search, FileText, Phone } from 'lucide-react';
+   7 | import Link from 'next/link';
+>  8 | import TestimonialCard from '@/components/TestimonialCard';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | // Define services array
+  11 | const services = [
+
+Import map: aliased to relative './components/TestimonialCard' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[ 5968118ms] [ERROR] ./app/[locale]/page.tsx:5:1
+Module not found: Can't resolve '@/components/ui/button'
+  3 | import { ServiceCard } from '@/components/ServiceCard';
+  4 | import { Card, CardContent } from '@/components/ui/card';
+> 5 | import { Button } from '@/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { Shield, Clock, Award, Users, Zap, Search, FileText, Phone } from 'lucide-react';
+  7 | import Link from 'next/link';
+  8 | import TestimonialCard from '@/components/TestimonialCard';
+
+Import map: aliased to relative './components/ui/button' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[ 5968118ms] [ERROR] ./app/[locale]/page.tsx:4:1
+Module not found: Can't resolve '@/components/ui/card'
+  2 | import { Hero } from '@/components/Hero';
+  3 | import { ServiceCard } from '@/components/ServiceCard';
+> 4 | import { Card, CardContent } from '@/components/ui/card';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from '@/components/ui/button';
+  6 | import { Shield, Clock, Award, Users, Zap, Search, FileText, Phone } from 'lucide-react';
+  7 | import Link from 'next/link';
+
+Import map: aliased to relative './components/ui/card' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[ 5968118ms] [ERROR] ./app/[locale]/layout.tsx:3:1
+Export locales doesn't exist in target module
+  1 | import { notFound } from 'next/navigation';
+  2 | import { getRequestConfig } from 'next-intl/server';
+> 3 | import { locales } from '@/i18n';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { getMessages } from 'next-intl/server';
+  5 | import Header from '@/components/Header';
+  6 | import Footer from '@/components/Footer';
+
+The export locales was not found in module [project]/i18n.ts [app-rsc] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[ 5993337ms] [ERROR] ./components/ui/button.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { cva, type VariantProps } from "class-variance-authority"
+  4 |
+> 5 | import { cn } from "@/lib/utils"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | const buttonVariants = cva(
+  8 |   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import traces:
+  #1 [Server Component]:
+    ./components/ui/button.tsx
+    ./app/[locale]/page.tsx
+
+  #2 [Client Component Browser]:
+    ./components/ui/button.tsx [Client Component Browser]
+    ./components/Header.tsx [Client Component Browser]
+    ./components/Header.tsx [Server Component]
+    ./app/[locale]/layout.tsx [Server Component]
+
+  #3 [Client Component Browser]:
+    ./components/ui/button.tsx [Client Component Browser]
+    ./components/ServiceCard.tsx [Client Component Browser]
+    ./components/ServiceCard.tsx [Server Component]
+    ./app/[locale]/page.tsx [Server Component]
+
+  #4 [Client Component SSR]:
+    ./components/ui/button.tsx [Client Component SSR]
+    ./components/Header.tsx [Client Component SSR]
+    ./components/Header.tsx [Server Component]
+    ./app/[locale]/layout.tsx [Server Component]
+
+  #5 [Client Component SSR]:
+    ./components/ui/button.tsx [Client Component SSR]
+    ./components/ServiceCard.tsx [Client Component SSR]
+    ./components/ServiceCard.tsx [Server Component]
+    ./app/[locale]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[ 5993337ms] [ERROR] ./components/ui/card.tsx:3:1
+Module not found: Can't resolve '@/lib/utils'
+  1 | import * as React from "react"
+  2 |
+> 3 | import { cn } from "@/lib/utils"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const Card = React.forwardRef<
+  6 |   HTMLDivElement,
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import traces:
+  Server Component:
+    ./components/ui/card.tsx
+    ./app/[locale]/page.tsx
+
+  Client Component Browser:
+    ./components/ui/card.tsx [Client Component Browser]
+    ./components/TestimonialCard.tsx [Client Component Browser]
+    ./components/TestimonialCard.tsx [Server Component]
+    ./app/[locale]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/card.tsx [Client Component SSR]
+    ./components/TestimonialCard.tsx [Client Component SSR]
+    ./components/TestimonialCard.tsx [Server Component]
+    ./app/[locale]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[ 5993337ms] [ERROR] ./app/[locale]/layout.tsx:3:1
+Export locales doesn't exist in target module
+  1 | import { notFound } from 'next/navigation';
+  2 | import { getRequestConfig } from 'next-intl/server';
+> 3 | import { locales } from '@/i18n';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { getMessages } from 'next-intl/server';
+  5 | import Header from '@/components/Header';
+  6 | import Footer from '@/components/Footer';
+
+The export locales was not found in module [project]/i18n.ts [app-rsc] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[ 6000361ms] [ERROR] ./components/ui/button.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { cva, type VariantProps } from "class-variance-authority"
+  4 |
+> 5 | import { cn } from "@/lib/utils"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | const buttonVariants = cva(
+  8 |   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import traces:
+  #1 [Server Component]:
+    ./components/ui/button.tsx
+    ./app/[locale]/page.tsx
+
+  #2 [Client Component Browser]:
+    ./components/ui/button.tsx [Client Component Browser]
+    ./components/Header.tsx [Client Component Browser]
+    ./components/Header.tsx [Server Component]
+    ./app/[locale]/layout.tsx [Server Component]
+
+  #3 [Client Component Browser]:
+    ./components/ui/button.tsx [Client Component Browser]
+    ./components/ServiceCard.tsx [Client Component Browser]
+    ./components/ServiceCard.tsx [Server Component]
+    ./app/[locale]/page.tsx [Server Component]
+
+  #4 [Client Component SSR]:
+    ./components/ui/button.tsx [Client Component SSR]
+    ./components/Header.tsx [Client Component SSR]
+    ./components/Header.tsx [Server Component]
+    ./app/[locale]/layout.tsx [Server Component]
+
+  #5 [Client Component SSR]:
+    ./components/ui/button.tsx [Client Component SSR]
+    ./components/ServiceCard.tsx [Client Component SSR]
+    ./components/ServiceCard.tsx [Server Component]
+    ./app/[locale]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[ 6000361ms] [ERROR] ./components/ui/card.tsx:3:1
+Module not found: Can't resolve '@/lib/utils'
+  1 | import * as React from "react"
+  2 |
+> 3 | import { cn } from "@/lib/utils"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const Card = React.forwardRef<
+  6 |   HTMLDivElement,
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import traces:
+  Server Component:
+    ./components/ui/card.tsx
+    ./app/[locale]/page.tsx
+
+  Client Component Browser:
+    ./components/ui/card.tsx [Client Component Browser]
+    ./components/TestimonialCard.tsx [Client Component Browser]
+    ./components/TestimonialCard.tsx [Server Component]
+    ./app/[locale]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/card.tsx [Client Component SSR]
+    ./components/TestimonialCard.tsx [Client Component SSR]
+    ./components/TestimonialCard.tsx [Server Component]
+    ./app/[locale]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[ 6000361ms] [ERROR] ./app/[locale]/layout.tsx:3:1
+Export locales doesn't exist in target module
+  1 | import { notFound } from 'next/navigation';
+  2 | import { getRequestConfig } from 'next-intl/server';
+> 3 | import { locales } from '@/i18n';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { getMessages } from 'next-intl/server';
+  5 | import Header from '@/components/Header';
+  6 | import Footer from '@/components/Footer';
+
+The export locales was not found in module [project]/i18n.ts [app-rsc] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[ 6024430ms] [ERROR] ./app/[locale]/layout.tsx:3:1
+Export locales doesn't exist in target module
+  1 | import { notFound } from 'next/navigation';
+  2 | import { getRequestConfig } from 'next-intl/server';
+> 3 | import { locales } from '@/i18n';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { getMessages } from 'next-intl/server';
+  5 | import Header from '@/components/Header';
+  6 | import Footer from '@/components/Footer';
+
+The export locales was not found in module [project]/i18n.ts [app-rsc] (ecmascript).
+Did you mean to import default?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[ 6036589ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[ 6036729ms] Error: Cannot find module './messages/undefined.json'
+    at <anonymous> (about://React/Server/file:///home/alexkiwi/projects/personal/agentic-next-payloadcms/.next/dev/server/chunks/ssr/_a533ff53._.js?35:31:18)
+    at LocaleLayout (about://React/Server/file:///home/alexkiwi/projects/personal/agentic-next-payloadcms/.next/dev/server/chunks/ssr/_a533ff53._.js?36:140:504)
+    at resolveErrorDev (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:1894:148)
+    at processFullStringRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2402:29)
+    at processFullBinaryRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2361:9)
+    at processBinaryChunk (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2470:221)
+    at progress (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2640:13)
+[ 6039774ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[ 6050045ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[ 6050220ms] Error: Cannot find module './messages/undefined.json'
+    at <anonymous> (about://React/Server/file:///home/alexkiwi/projects/personal/agentic-next-payloadcms/.next/dev/server/chunks/ssr/_a533ff53._.js?35:31:18)
+    at LocaleLayout (about://React/Server/file:///home/alexkiwi/projects/personal/agentic-next-payloadcms/.next/dev/server/chunks/ssr/_a533ff53._.js?36:133:504)
+    at resolveErrorDev (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:1894:148)
+    at processFullStringRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2402:29)
+    at processFullBinaryRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2361:9)
+    at processBinaryChunk (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2470:221)
+    at progress (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2640:13)
+[ 6053231ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[ 6070454ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[ 6070612ms] Error: No locale was returned from `getRequestConfig`.
+
+See https://next-intl.dev/docs/usage/configuration#i18n-request
+    at  LocaleLayout (about://React/Server/file:///home/alexkiwi/projects/personal/agentic-next-payloadcms/.next/dev/server/chunks/ssr/_a533ff53._.js?35:133:22)
+    at resolveErrorDev (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:1894:148)
+    at processFullStringRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2402:29)
+    at processFullBinaryRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2361:9)
+    at processBinaryChunk (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2470:221)
+    at progress (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2640:13)
+[ 6073627ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[ 6088442ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[ 6088568ms] Error: Cannot find module './messages/undefined.json'
+    at <anonymous> (about://React/Server/file:///home/alexkiwi/projects/personal/agentic-next-payloadcms/.next/dev/server/chunks/ssr/_a533ff53._.js?35:31:18)
+    at LocaleLayout (about://React/Server/file:///home/alexkiwi/projects/personal/agentic-next-payloadcms/.next/dev/server/chunks/ssr/_a533ff53._.js?36:133:504)
+    at resolveErrorDev (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:1894:148)
+    at processFullStringRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2402:29)
+    at processFullBinaryRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2361:9)
+    at processBinaryChunk (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2470:221)
+    at progress (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2640:13)
+[ 6091598ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[ 6108734ms] [ERROR] ./app/[locale]/layout.tsx:1:1
+Module not found: Can't resolve 'next-intl/client'
+> 1 | import { NextIntlClientProvider } from 'next-intl/client';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { getMessages } from 'next-intl/server';
+  3 | import { locales } from '@/i18n';
+  4 | import Header from '@/components/Header';
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[ 6111745ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[ 6116883ms] [ERROR] ./app/[locale]/layout.tsx:1:1
+Module not found: Can't resolve 'next-intl/client'
+> 1 | import { NextIntlClientProvider } from 'next-intl/client';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { getMessages } from 'next-intl/server';
+  3 | import { locales } from '@/i18n';
+  4 | import Header from '@/components/Header';
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[ 6129828ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[ 6129993ms] Error: Failed to call `useTranslations` because the context from `NextIntlClientProvider` was not found.
+
+This can happen because:
+1) You intended to render this component as a Server Component, the render
+   failed, and therefore React attempted to render the component on the client
+   instead. If this is the case, check the console for server errors.
+2) You intended to render this component on the client side, but no context was found.
+   Learn more about this error here: https://next-intl.dev/docs/environments/server-client-components#missing-context
+    at http://localhost:3000/_next/static/chunks/node_modules__pnpm_d3b9d34e._.js:6013:19
+    at Header (http://localhost:3000/_next/static/chunks/_d9564ab0._.js:134:440)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:14826:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:4651:24)
+    at updateFunctionComponent (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:6112:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:6687:639)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9562:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9456:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9440:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9105:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_20ef5bc4._.js:2647:64)
+[ 6133070ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[ 6135432ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[ 6135623ms] Error: Failed to call `useTranslations` because the context from `NextIntlClientProvider` was not found.
+
+This can happen because:
+1) You intended to render this component as a Server Component, the render
+   failed, and therefore React attempted to render the component on the client
+   instead. If this is the case, check the console for server errors.
+2) You intended to render this component on the client side, but no context was found.
+   Learn more about this error here: https://next-intl.dev/docs/environments/server-client-components#missing-context
+    at http://localhost:3000/_next/static/chunks/node_modules__pnpm_d3b9d34e._.js:6013:19
+    at Header (http://localhost:3000/_next/static/chunks/_d9564ab0._.js:134:440)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:14826:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:4651:24)
+    at updateFunctionComponent (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:6112:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:6687:639)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9562:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9456:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9440:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9105:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_20ef5bc4._.js:2647:64)
+[ 6138634ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[ 6165678ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:2297
+[ 6165691ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[ 6165839ms] Error: No locale was returned from `getRequestConfig`.
+
+See https://next-intl.dev/docs/usage/configuration#i18n-request
+    at  LocaleLayout (about://React/Server/file:///home/alexkiwi/projects/personal/agentic-next-payloadcms/.next/dev/server/chunks/ssr/_a533ff53._.js?4:135:22)
+    at resolveErrorDev (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:1894:148)
+    at processFullStringRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2402:29)
+    at processFullBinaryRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2361:9)
+    at processBinaryChunk (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2470:221)
+    at progress (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2640:13)
+[ 6168865ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[ 6184773ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[ 6184903ms] Error: Cannot find module './messages/undefined.json'
+    at <anonymous> (about://React/Server/file:///home/alexkiwi/projects/personal/agentic-next-payloadcms/.next/dev/server/chunks/ssr/_a533ff53._.js?2:31:18)
+    at LocaleLayout (about://React/Server/file:///home/alexkiwi/projects/personal/agentic-next-payloadcms/.next/dev/server/chunks/ssr/_a533ff53._.js?3:134:504)
+    at resolveErrorDev (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:1894:148)
+    at processFullStringRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2402:29)
+    at processFullBinaryRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2361:9)
+    at processBinaryChunk (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2470:221)
+    at progress (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2640:13)
+[ 6187942ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[ 6189017ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[ 6189184ms] Error: Cannot find module './messages/undefined.json'
+    at <anonymous> (about://React/Server/file:///home/alexkiwi/projects/personal/agentic-next-payloadcms/.next/dev/server/chunks/ssr/_a533ff53._.js?35:31:18)
+    at LocaleLayout (about://React/Server/file:///home/alexkiwi/projects/personal/agentic-next-payloadcms/.next/dev/server/chunks/ssr/_a533ff53._.js?36:134:504)
+    at resolveErrorDev (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:1894:148)
+    at processFullStringRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2402:29)
+    at processFullBinaryRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2361:9)
+    at processBinaryChunk (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2470:221)
+    at progress (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2640:13)
+[ 6192256ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[ 6215894ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[ 6216077ms] Error: Couldn't find next-intl config file. Please follow the instructions at https://next-intl.dev/docs/getting-started/app-router
+    at LocaleLayout (about://React/Server/file:///home/alexkiwi/projects/personal/agentic-next-payloadcms/.next/dev/server/chunks/ssr/_a533ff53._.js?35:134:504)
+    at resolveErrorDev (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:1894:148)
+    at processFullStringRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2402:29)
+    at processFullBinaryRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2361:9)
+    at processBinaryChunk (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2470:221)
+    at progress (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2640:13)
+[ 6219115ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[ 6220786ms] [WARNING] [HMR] Invalid message: {"isTrusted":true}
+TypeError: Cannot convert undefined or null to object
+    at Object.keys (<anonymous>)
+    at extractModulesFromTurbopackMessage (http://localhost:3000/_next/static/chunks/c70d6_next_dist_client_557cf8c4._.js:11210:39)
+    at TurbopackHmr.onTurbopackMessage (http://localhost:3000/_next/static/chunks/c70d6_next_dist_client_557cf8c4._.js:11157:32)
+    at processMessage (http://localhost:3000/_next/static/chunks/c70d6_next_dist_client_557cf8c4._.js:11589:30)
+    at WebSocket.handleMessage (http://localhost:3000/_next/static/chunks/c70d6_next_dist_client_557cf8c4._.js:10914:52) @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:2297
+[ 6221110ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[ 6221296ms] Error: Failed to call `useTranslations` because the context from `NextIntlClientProvider` was not found.
+
+This can happen because:
+1) You intended to render this component as a Server Component, the render
+   failed, and therefore React attempted to render the component on the client
+   instead. If this is the case, check the console for server errors.
+2) You intended to render this component on the client side, but no context was found.
+   Learn more about this error here: https://next-intl.dev/docs/environments/server-client-components#missing-context
+    at http://localhost:3000/_next/static/chunks/node_modules__pnpm_d3b9d34e._.js:6013:19
+    at Header (http://localhost:3000/_next/static/chunks/_d9564ab0._.js:134:440)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:14826:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:4651:24)
+    at updateFunctionComponent (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:6112:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:6687:639)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9562:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9456:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9440:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9105:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_20ef5bc4._.js:2647:64)
+[ 6224313ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[ 6241132ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:2297
+[ 6241489ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[ 6241678ms] ReferenceError: t is not defined
+    at Header (http://localhost:3000/_next/static/chunks/_d9564ab0._.js:156:47)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:14826:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:4651:24)
+    at updateFunctionComponent (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:6112:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:6687:639)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9562:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9456:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9440:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9105:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_20ef5bc4._.js:2647:64)
+[ 6244704ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[ 6249536ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:2297
+[ 6249840ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[ 6250053ms] ReferenceError: t is not defined
+    at Header (http://localhost:3000/_next/static/chunks/_d9564ab0._.js:156:47)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:14826:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:4651:24)
+    at updateFunctionComponent (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:6112:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:6687:639)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9562:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9456:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9440:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9105:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_20ef5bc4._.js:2647:64)
+[ 6253071ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[ 6276378ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:2297
+[ 6276762ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[ 6276985ms] Error: Failed to call `useTranslations` because the context from `NextIntlClientProvider` was not found.
+
+This can happen because:
+1) You intended to render this component as a Server Component, the render
+   failed, and therefore React attempted to render the component on the client
+   instead. If this is the case, check the console for server errors.
+2) You intended to render this component on the client side, but no context was found.
+   Learn more about this error here: https://next-intl.dev/docs/environments/server-client-components#missing-context
+    at http://localhost:3000/_next/static/chunks/node_modules__pnpm_cd317268._.js:4851:19
+    at Hero (http://localhost:3000/_next/static/chunks/components_b47f5518._.js:23:440)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:14826:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:4651:24)
+    at updateFunctionComponent (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:6112:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:6687:639)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9562:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9456:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9440:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9105:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_20ef5bc4._.js:2647:64)
+[ 6280010ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[ 6285423ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:2297
+[ 6285729ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[ 6285938ms] Error: Failed to call `useTranslations` because the context from `NextIntlClientProvider` was not found.
+
+This can happen because:
+1) You intended to render this component as a Server Component, the render
+   failed, and therefore React attempted to render the component on the client
+   instead. If this is the case, check the console for server errors.
+2) You intended to render this component on the client side, but no context was found.
+   Learn more about this error here: https://next-intl.dev/docs/environments/server-client-components#missing-context
+    at http://localhost:3000/_next/static/chunks/node_modules__pnpm_cd317268._.js:4851:19
+    at Hero (http://localhost:3000/_next/static/chunks/components_b47f5518._.js:23:440)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:14826:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:4651:24)
+    at updateFunctionComponent (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:6112:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:6687:639)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9562:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9456:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9440:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:9105:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-dom_57028312._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_20ef5bc4._.js:2647:64)
+[ 6288950ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[ 6307320ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:2297

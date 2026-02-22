@@ -1,0 +1,2 @@
+[   10335ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/admin/login?redirect=%2Fadmin%2F:0
+[   98092ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/admin/login?redirect=%2Fadmin%2F:0

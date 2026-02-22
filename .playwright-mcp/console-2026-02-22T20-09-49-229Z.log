@@ -1,0 +1,29 @@
+[     122ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/ro:0
+[  177876ms] [ERROR] ./app/test/page.tsx:1:6
+Parsing ecmascript source code failed
+> 1 | Test page
+    |      ^^^^
+  2 |
+
+Expected ';', '}' or <eof> @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[  178373ms] [ERROR] ./app/test/page.tsx:1:6
+Parsing ecmascript source code failed
+> 1 | Test page
+    |      ^^^^
+  2 |
+
+Expected ';', '}' or <eof> @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[  178427ms] [ERROR] ./app/test/page.tsx:1:6
+Parsing ecmascript source code failed
+> 1 | Test page
+    |      ^^^^
+  2 |
+
+Expected ';', '}' or <eof> @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127
+[  178701ms] [ERROR] ./app/test/page.tsx:1:6
+Parsing ecmascript source code failed
+> 1 | Test page
+    |      ^^^^
+  2 |
+
+Expected ';', '}' or <eof> @ http://localhost:3000/_next/static/chunks/c70d6_next_dist_be483b85._.js:3127

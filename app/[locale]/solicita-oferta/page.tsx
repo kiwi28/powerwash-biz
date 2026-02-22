@@ -1,8 +1,6 @@
-import { getTranslations } from 'next-intl/server';
 import { QuoteForm } from '@/components/QuoteForm';
 
-export default async function QuoteRequestPage() {
-  const t = await getTranslations('quoteRequest');
+export default function QuoteRequestPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-secondary/5">
