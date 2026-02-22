@@ -3,11 +3,20 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Phone } from 'lucide-react';
-
-// Temporary mock i18n function
-const t = (key: string) => key;
+import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
+import { Locale } from '@/lib/getLocalePath';
 
 export function Hero() {
+  const t = useTranslations('hero');
+  const pathname = usePathname();
+
+  // Get current locale from URL path
+  const pathSegments = pathname.split('/').filter(Boolean);
+  const currentLocale: Locale = pathSegments[0] === 'en' ? 'en' : 'ro';
+
+  // Quote page link - conditionally add locale prefix
+  const quoteUrl = currentLocale === 'en' ? '/en/solicita-oferta' : '/solicita-oferta';
 
   return (
     <section className="relative bg-gradient-to-br from-primary/10 via-background to-secondary/10">
@@ -21,7 +30,7 @@ export function Hero() {
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg">
-              <Link href="/solicita-oferta">
+              <Link href={quoteUrl}>
                 {t('cta')}
               </Link>
             </Button>

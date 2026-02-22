@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Shield, Clock, Award, Users, Zap, Search, FileText, Phone } from 'lucide-react';
 import Link from 'next/link';
 import TestimonialCard from '@/components/TestimonialCard';
+import { Locale } from '@/lib/getLocalePath';
 
 // Define services array
 const services = [
@@ -114,7 +115,14 @@ const galleryItems = [
   { emoji: '💎', title: 'Terasă după', subtitle: 'Suprafață curată' },
 ];
 
-export default async function LandingPage() {
+export default async function LandingPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const currentLocale = locale as Locale;
+
   // const t = await getTranslations('hero');
 
   return (
@@ -138,7 +146,9 @@ export default async function LandingPage() {
           </div>
           <div className="text-center">
             <Button asChild size="lg" variant="outline">
-              <Link href="/servicii">Vezi Toate Serviciile</Link>
+              <Link href={currentLocale === 'en' ? '/en/servicii' : '/servicii'}>
+                {currentLocale === 'en' ? 'View All Services' : 'Vezi Toate Serviciile'}
+              </Link>
             </Button>
           </div>
         </div>
@@ -269,9 +279,9 @@ export default async function LandingPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button asChild size="lg" variant="secondary">
-                <Link href="/solicita-oferta">
+                <Link href={currentLocale === 'en' ? '/en/solicita-oferta' : '/solicita-oferta'}>
                   <FileText className="mr-2 h-4 w-4" />
-                  Solicită o Ofertă
+                  {currentLocale === 'en' ? 'Request a Quote' : 'Solicită o Ofertă'}
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20">

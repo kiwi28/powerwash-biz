@@ -1,0 +1,21 @@
+[     521ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/ro:0
+[     693ms] Error: Couldn't find next-intl config file. Please follow the instructions at https://next-intl.dev/docs/getting-started/app-router
+    at LocaleLayout (about://React/Server/file:///home/alexkiwi/projects/personal/agentic-next-payloadcms/.next/dev/server/chunks/ssr/_a533ff53._.js?35:144:504)
+    at resolveErrorDev (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:1894:148)
+    at processFullStringRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2402:29)
+    at processFullBinaryRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2361:9)
+    at processBinaryChunk (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2470:221)
+    at progress (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2640:13)
+[    3710ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/ro:0
+[    3710ms] [WARNING] The resource http://localhost:3000/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/ro:0
+[    3710ms] [WARNING] The resource http://localhost:3000/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/ro:0
+[   11902ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/ro:0
+[   12062ms] Error: Couldn't find next-intl config file. Please follow the instructions at https://next-intl.dev/docs/getting-started/app-router
+    at resolveErrorDev (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:1894:148)
+    at processFullStringRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2402:29)
+    at processFullBinaryRow (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2361:9)
+    at processBinaryChunk (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2470:221)
+    at progress (http://localhost:3000/_next/static/chunks/c70d6_next_dist_compiled_react-server-dom-turbopack_04def57c._.js:2640:13)
+[   15089ms] [WARNING] The resource http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__28bc9c2a._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/ro:0
+[   15089ms] [WARNING] The resource http://localhost:3000/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/ro:0
+[   15089ms] [WARNING] The resource http://localhost:3000/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/ro:0
