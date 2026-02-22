@@ -20,15 +20,11 @@ import {
 } from '@/components/ui/form';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { CheckCircle, Send, ArrowLeft, ArrowRight } from 'lucide-react';
-
-// Temporary mock i18n function
-const t = (key: string) => key;
+import { useTranslations } from 'next-intl';
 
 const quoteFormSchema = zod.object({
   fullName: zod.string().min(2, { message: 'Numele trebuie să aibă cel puțin 2 caractere' }),
-  phone: zod
-    .string()
-    .regex(/^(07[0-9]{8}|\+407[0-9]{8})$/, { message: 'Numărul de telefon trebuie să fie un număr valid din România' }),
+  phone: zod.string().regex(/^(07[0-9]{8}|\+407[0-9]{8})$/, { message: 'Numărul de telefon trebuie să fie un număr valid din România' }),
   email: zod.string().email({ message: 'Email-ul trebuie să fie valid' }),
   address: zod.string().min(5, { message: 'Adresa trebuie să aibă cel puțin 5 caractere' }),
   serviceType: zod.enum(['curatare-alei', 'curatare-pereti', 'curatare-terase', 'curatare-fatada', 'alta']),
@@ -46,6 +42,8 @@ const STEPS = ['personal-info', 'service-details', 'notes'] as const;
 type Step = (typeof STEPS)[number];
 
 export function QuoteForm() {
+  const t = useTranslations('form');
+  const tCommon = useTranslations('common');
   const [currentStep, setCurrentStep] = useState<Step>('personal-info');
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -66,6 +64,23 @@ export function QuoteForm() {
       notes: '',
     },
   });
+
+  // Custom error messages
+  const getErrorMessage = (error: any) => {
+    if (error?.type === 'too_small') {
+      if (error.path.includes('fullName')) return t('errors.fullName');
+      if (error.path.includes('address')) return t('errors.address');
+    }
+    if (error?.type === 'invalid_string') {
+      if (error.path.includes('phone')) return t('errors.phone');
+      if (error.path.includes('email')) return t('errors.email');
+    }
+    if (error?.type === 'required' || error?.type === 'too_small') {
+      if (error.path.includes('surfaceArea')) return t('errors.surfaceArea');
+      if (error.path.includes('preferredDate')) return t('errors.preferredDate');
+    }
+    return '';
+  };
 
   const watchedFields = form.watch();
 
@@ -89,7 +104,7 @@ export function QuoteForm() {
       setCurrentStep('personal-info');
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('A apărut o eroare. Vă rugăm încercați din nou.');
+      alert(t('errors.submitError'));
     } finally {
       setIsSubmitting(false);
     }
@@ -129,9 +144,9 @@ export function QuoteForm() {
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>Solicită o Ofertă</CardTitle>
+              <CardTitle>{t('title')}</CardTitle>
               <CardDescription>
-                Completează formularul pentru a primi o ofertă personalizată
+                {t('description')}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -164,15 +179,15 @@ export function QuoteForm() {
               {/* Step 1: Personal Info */}
               {currentStep === 'personal-info' && (
                 <div className="space-y-4">
-                  <h3 className="text-lg font-semibold mb-4">Informații Personale</h3>
+                  <h3 className="text-lg font-semibold mb-4">{t('steps.personalInfo')}</h3>
                   <FormField
                     control={form.control}
                     name="fullName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Nume Complet</FormLabel>
+                        <FormLabel>{t('fields.fullName.label')}</FormLabel>
                         <FormControl>
-                          <Input placeholder="Ion Popescu" {...field} />
+                          <Input placeholder={t('fields.fullName.placeholder')} {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -183,9 +198,9 @@ export function QuoteForm() {
                     name="phone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Telefon</FormLabel>
+                        <FormLabel>{t('fields.phone.label')}</FormLabel>
                         <FormControl>
-                          <Input placeholder="0712345678" {...field} />
+                          <Input placeholder={t('fields.phone.placeholder')} {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -196,9 +211,9 @@ export function QuoteForm() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel>{t('fields.email.label')}</FormLabel>
                         <FormControl>
-                          <Input type="email" placeholder="ion@example.com" {...field} />
+                          <Input type="email" placeholder={t('fields.email.placeholder')} {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -209,9 +224,9 @@ export function QuoteForm() {
                     name="address"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Adresă</FormLabel>
+                        <FormLabel>{t('fields.address.label')}</FormLabel>
                         <FormControl>
-                          <Input placeholder="Strada Exemplului nr. 10, Iași" {...field} />
+                          <Input placeholder={t('fields.address.placeholder')} {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -223,25 +238,25 @@ export function QuoteForm() {
               {/* Step 2: Service Details */}
               {currentStep === 'service-details' && (
                 <div className="space-y-4">
-                  <h3 className="text-lg font-semibold mb-4">Detalii Serviciu</h3>
+                  <h3 className="text-lg font-semibold mb-4">{t('steps.serviceDetails')}</h3>
                   <FormField
                     control={form.control}
                     name="serviceType"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Tip de Serviciu</FormLabel>
+                        <FormLabel>{t('fields.serviceType.label')}</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
                             <SelectTrigger>
-                              <SelectValue placeholder="Alegeți tipul de serviciu" />
+                              <SelectValue placeholder={t('fields.serviceType.placeholder')} />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="curatare-alei">Curățare Alei</SelectItem>
-                            <SelectItem value="curatare-pereti">Curățare Pereți Exteriori</SelectItem>
-                            <SelectItem value="curatare-terase">Curățare Terasă</SelectItem>
-                            <SelectItem value="curatare-fatada">Curățare Fațadă</SelectItem>
-                            <SelectItem value="alta">Altul</SelectItem>
+                            <SelectItem value="curatare-alei">{t('fields.serviceType.options.alei')}</SelectItem>
+                            <SelectItem value="curatare-pereti">{t('fields.serviceType.options.pereti')}</SelectItem>
+                            <SelectItem value="curatare-terase">{t('fields.serviceType.options.terase')}</SelectItem>
+                            <SelectItem value="curatare-fatada">{t('fields.serviceType.options.fatada')}</SelectItem>
+                            <SelectItem value="alta">{t('fields.serviceType.options.alta')}</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -253,7 +268,7 @@ export function QuoteForm() {
                     name="surfaceArea"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Suprafață (mp)</FormLabel>
+                        <FormLabel>{t('fields.surfaceArea.label')}</FormLabel>
                         <FormControl>
                           <Input type="number" placeholder="100" {...field} />
                         </FormControl>
@@ -266,19 +281,19 @@ export function QuoteForm() {
                     name="surfaceType"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Tip de Suprafață</FormLabel>
+                        <FormLabel>{t('fields.surfaceType.label')}</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
                             <SelectTrigger>
-                              <SelectValue placeholder="Alegeți tipul de suprafață" />
+                              <SelectValue placeholder={t('fields.surfaceType.placeholder')} />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="beton">Beton</SelectItem>
-                            <SelectItem value="pietra">Piatră</SelectItem>
-                            <SelectItem value="lemn">Lemn</SelectItem>
-                            <SelectItem value="gips">Gips</SelectItem>
-                            <SelectItem value="alta">Altul</SelectItem>
+                            <SelectItem value="beton">{t('fields.surfaceType.options.beton')}</SelectItem>
+                            <SelectItem value="pietra">{t('fields.surfaceType.options.pietra')}</SelectItem>
+                            <SelectItem value="lemn">{t('fields.surfaceType.options.lemn')}</SelectItem>
+                            <SelectItem value="gips">{t('fields.surfaceType.options.gips')}</SelectItem>
+                            <SelectItem value="alta">{t('fields.surfaceType.options.alta')}</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -290,7 +305,7 @@ export function QuoteForm() {
                     name="preferredDate"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Data Preferată</FormLabel>
+                        <FormLabel>{t('fields.preferredDate.label')}</FormLabel>
                         <FormControl>
                           <Input type="date" {...field} />
                         </FormControl>
@@ -303,17 +318,17 @@ export function QuoteForm() {
                     name="preferredTime"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Ora Preferată</FormLabel>
+                        <FormLabel>{t('fields.preferredTime.label')}</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
                             <SelectTrigger>
-                              <SelectValue placeholder="Alegeți ora preferată" />
+                              <SelectValue placeholder={t('fields.preferredTime.placeholder')} />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="dimineata">Dimineața</SelectItem>
-                            <SelectItem value="pranz">Prânz</SelectItem>
-                            <SelectItem value="dupa-amiaza">După-amiaza</SelectItem>
+                            <SelectItem value="dimineata">{t('fields.preferredTime.options.dimineata')}</SelectItem>
+                            <SelectItem value="pranz">{t('fields.preferredTime.options.pranz')}</SelectItem>
+                            <SelectItem value="dupa-amiaza">{t('fields.preferredTime.options.dupa-amiaza')}</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -325,17 +340,17 @@ export function QuoteForm() {
                     name="urgency"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Urgență</FormLabel>
+                        <FormLabel>{t('fields.urgency.label')}</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
                             <SelectTrigger>
-                              <SelectValue placeholder="Alegeți nivelul de urgență" />
+                              <SelectValue placeholder={t('fields.urgency.placeholder')} />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="normala">Normală</SelectItem>
-                            <SelectItem value="urgenta">Urgentă</SelectItem>
-                            <SelectItem value="foarte-urgenta">Foarte Urgentă</SelectItem>
+                            <SelectItem value="normala">{t('fields.urgency.options.normala')}</SelectItem>
+                            <SelectItem value="urgenta">{t('fields.urgency.options.urgenta')}</SelectItem>
+                            <SelectItem value="foarte-urgenta">{t('fields.urgency.options.foarte-urgenta')}</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -348,16 +363,16 @@ export function QuoteForm() {
               {/* Step 3: Notes */}
               {currentStep === 'notes' && (
                 <div className="space-y-4">
-                  <h3 className="text-lg font-semibold mb-4">Note Adiționale</h3>
+                  <h3 className="text-lg font-semibold mb-4">{t('steps.notes')}</h3>
                   <FormField
                     control={form.control}
                     name="notes"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Observații (Opțional)</FormLabel>
+                        <FormLabel>{t('fields.notes.label')}</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Orice alte detalii pe care doriți să le menționați..."
+                            placeholder={t('fields.notes.placeholder')}
                             className="min-h-[120px]"
                             {...field}
                           />
@@ -369,19 +384,19 @@ export function QuoteForm() {
 
                   {/* Form Summary */}
                   <div className="mt-6 p-4 bg-muted/50 rounded-lg space-y-2">
-                    <h4 className="font-semibold">Rezumat Cerere</h4>
+                    <h4 className="font-semibold">{t('summary.title')}</h4>
                     <div className="text-sm space-y-1">
-                      <p><span className="font-medium">Nume:</span> {watchedFields.fullName}</p>
-                      <p><span className="font-medium">Telefon:</span> {watchedFields.phone}</p>
-                      <p><span className="font-medium">Email:</span> {watchedFields.email}</p>
-                      <p><span className="font-medium">Adresă:</span> {watchedFields.address}</p>
-                      <p><span className="font-medium">Serviciu:</span> {watchedFields.serviceType}</p>
-                      <p><span className="font-medium">Suprafață:</span> {watchedFields.surfaceArea} mp</p>
-                      <p><span className="font-medium">Data:</span> {watchedFields.preferredDate}</p>
-                      <p><span className="font-medium">Ora:</span> {watchedFields.preferredTime}</p>
-                      <p><span className="font-medium">Urgență:</span> {watchedFields.urgency}</p>
+                      <p><span className="font-medium">{t('summary.name')}:</span> {watchedFields.fullName}</p>
+                      <p><span className="font-medium">{t('summary.phone')}:</span> {watchedFields.phone}</p>
+                      <p><span className="font-medium">{t('summary.email')}:</span> {watchedFields.email}</p>
+                      <p><span className="font-medium">{t('summary.address')}:</span> {watchedFields.address}</p>
+                      <p><span className="font-medium">{t('summary.service')}:</span> {watchedFields.serviceType}</p>
+                      <p><span className="font-medium">{t('summary.surface')}:</span> {watchedFields.surfaceArea} {tCommon('mp')}</p>
+                      <p><span className="font-medium">{t('summary.date')}:</span> {watchedFields.preferredDate}</p>
+                      <p><span className="font-medium">{t('summary.time')}:</span> {watchedFields.preferredTime}</p>
+                      <p><span className="font-medium">{t('summary.urgency')}:</span> {watchedFields.urgency}</p>
                       {watchedFields.notes && (
-                        <p><span className="font-medium">Note:</span> {watchedFields.notes}</p>
+                        <p><span className="font-medium">{t('summary.notes')}:</span> {watchedFields.notes}</p>
                       )}
                     </div>
                   </div>
@@ -397,22 +412,22 @@ export function QuoteForm() {
                   disabled={currentStep === 'personal-info'}
                 >
                   <ArrowLeft className="mr-2 h-4 w-4" />
-                  Înapoi
+                  {t('buttons.back')}
                 </Button>
                 {isLastStep ? (
                   <Button type="submit" disabled={isSubmitting}>
                     {isSubmitting ? (
-                      'Se trimite...'
+                      t('buttons.submitting')
                     ) : (
                       <>
-                        Trimite Cererea
+                        {t('buttons.submit')}
                         <Send className="ml-2 h-4 w-4" />
                       </>
                     )}
                   </Button>
                 ) : (
                   <Button type="button" onClick={nextStep}>
-                    Continuă
+                    {t('buttons.continue')}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 )}
@@ -428,15 +443,15 @@ export function QuoteForm() {
           <DialogHeader>
             <div className="flex flex-col items-center text-center">
               <CheckCircle className="h-16 w-16 text-green-500 mb-4" />
-              <DialogTitle className="text-2xl">Cerere Trimisă!</DialogTitle>
+              <DialogTitle className="text-2xl">{t('success.title')}</DialogTitle>
               <DialogDescription className="text-base mt-2">
-                Vă mulțumim pentru solicitare. Vă vom contacta în cel mai scurt timp pentru a stabili detaliile.
+                {t('success.message')}
               </DialogDescription>
             </div>
           </DialogHeader>
           <div className="flex justify-center mt-4">
             <Button onClick={() => setShowSuccessModal(false)}>
-              Închide
+              {t('success.close')}
             </Button>
           </div>
         </DialogContent>

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
-import { Locale } from '@/lib/getLocalePath';
+import type { Locale } from '@/lib/getLocalePath';
 
 export default function Footer() {
   const t = useTranslations();
@@ -24,13 +24,13 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground">
               {currentLocale === 'en'
                 ? 'Professional pressure washing services in Iași. Transform your outdoor spaces with our superior quality services.'
-                : 'Servicii profesionale de spălare cu presiune în Iași. Transformați spațiile exterioare cu serviciile noastre de calitate superioară.'}
+                : t('footer.brandDescription')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">{currentLocale === 'en' ? 'Quick Links' : 'Link-uri Rapide'}</h3>
+            <h3 className="text-lg font-semibold mb-4">{currentLocale === 'en' ? 'Quick Links' : t('footer.quickLinks')}</h3>
             <nav className="flex flex-col gap-2">
               <Link href={currentLocale === 'en' ? '/en' : '/'} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 {t('nav.home')}
@@ -52,26 +52,26 @@ export default function Footer() {
 
           {/* Contact Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">{currentLocale === 'en' ? 'Contact' : 'Contact'}</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('footer.contact')}</h3>
             <div className="flex flex-col gap-3">
               <a href="tel:07XXXXXXXX" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 <Phone className="h-4 w-4" />
-                <span>07XX XXX XXX</span>
+                <span>{t('footer.phone')}</span>
               </a>
               <a href="mailto:contact@powerwash.ro" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 <Mail className="h-4 w-4" />
-                <span>contact@powerwash.ro</span>
+                <span>{t('footer.email')}</span>
               </a>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4" />
-                <span>Iași, România</span>
+                <span>{t('footer.location')}</span>
               </div>
             </div>
           </div>
 
           {/* Social Media Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">{currentLocale === 'en' ? 'Follow Us' : 'Urmărește-ne'}</h3>
+            <h3 className="text-lg font-semibold mb-4">{currentLocale === 'en' ? 'Follow Us' : t('footer.followUs')}</h3>
             <div className="flex gap-4">
               <a href="#" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Facebook">
                 <Facebook className="h-5 w-5" />
@@ -85,7 +85,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>&copy; {currentYear} {t('common.siteName')}. {currentLocale === 'en' ? 'All rights reserved.' : 'Toate drepturile rezervate.'}</p>
+          <p>&copy; {currentYear} {t('common.siteName')}. {currentLocale === 'en' ? 'All rights reserved.' : t('footer.allRightsReserved')}</p>
         </div>
       </div>
     </footer>

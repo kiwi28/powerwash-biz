@@ -1,4 +1,5 @@
-import { locales, type Locale } from '@/i18n';
+import { locales } from '@/i18n';
+import type { Locale } from '@/lib/getLocalePath';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import IntlProvider from '@/components/IntlProvider';

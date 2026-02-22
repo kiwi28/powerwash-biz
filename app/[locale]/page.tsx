@@ -1,4 +1,5 @@
-import { getTranslations } from 'next-intl/server';
+'use client';
+
 import { Hero } from '@/components/Hero';
 import { ServiceCard } from '@/components/ServiceCard';
 import { Card, CardContent } from '@/components/ui/card';
@@ -7,123 +8,129 @@ import { Shield, Clock, Award, Users, Zap, Search, FileText, Phone } from 'lucid
 import Link from 'next/link';
 import TestimonialCard from '@/components/TestimonialCard';
 import { Locale } from '@/lib/getLocalePath';
+import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
+import { ServiceCardProps } from '@/components/ServiceCard';
 
-// Define services array
-const services = [
-  {
-    title: 'Curățare Alei',
-    description: 'Îndepărtare eficientă a mușchiului, a algelor și a petelor de pe aleile de beton și pietriș.',
-    priceRange: '5-8',
-    icon: <Zap className="h-6 w-6 text-primary" />,
-    slug: 'curatare-alei',
-  },
-  {
-    title: 'Curățare Pereți Exteriori',
-    description: 'Restaurarea aspectului original al pereț exteriori cu echipamente profesionale de spălare.',
-    priceRange: '8-12',
-    icon: <Shield className="h-6 w-6 text-primary" />,
-    slug: 'curatare-pereti',
-  },
-  {
-    title: 'Curățare Teras',
-    description: 'Terase curate și sigure, perfecte pentru utilizare imediată după tratament.',
-    priceRange: '6-10',
-    icon: <Award className="h-6 w-6 text-primary" />,
-    slug: 'curatare-terase',
-  },
-  {
-    title: 'Curățare Fațadă',
-    description: 'Servicii complete de curățare a fațadelor pentru a reda strălucirea clădirilor.',
-    priceRange: '10-15',
-    icon: <Users className="h-6 w-6 text-primary" />,
-    slug: 'curatare-fatada',
-  },
-];
-
-// Define benefits array
-const benefits = [
-  {
-    icon: <Award className="h-8 w-8 text-primary" />,
-    title: 'Echipament Profesional',
-    description: 'Utilizăm doar echipamente de înaltă presiune și produse de curățare certificate.',
-  },
-  {
-    icon: <Shield className="h-8 w-8 text-primary" />,
-    title: 'Garanție a Lucrării',
-    description: 'Oferim garanție pentru toate serviciile noastre de curățare cu presiune.',
-  },
-  {
-    icon: <Clock className="h-8 w-8 text-primary" />,
-    title: 'Execuție Rapidă',
-    description: 'Echipa noastră eficientă realizează lucrările în cel mai scurt timp posibil.',
-  },
-  {
-    icon: <Users className="h-8 w-8 text-primary" />,
-    title: 'Experiență',
-    description: 'Peste 10 ani de experiență în domeniul curățării profesionale.',
-  },
-];
-
-// Define steps array
-const steps = [
-  {
-    number: 1,
-    title: 'Solicită o Ofertă',
-    description: 'Contactează-ne pentru o ofertă gratuită personalizată în funcție de nevoile tale.',
-  },
-  {
-    number: 2,
-    title: 'Programare',
-    description: 'Stabilim împreună data și ora celei mai potrivite pentru executarea lucrării.',
-  },
-  {
-    number: 3,
-    title: 'Execuție și Garanție',
-    description: 'Realizăm lucrarea profesional și oferim garanție pentru rezultate.',
-  },
-];
-
-// Define testimonials array
-const testimonials = [
-  {
-    name: 'Maria Ionescu',
-    rating: 5,
-    review: 'Serviciu excelent! Aleea mea arată ca nouă după curățare. Recomand cu încredere.',
-    service: 'Curățare Alei',
-  },
-  {
-    name: 'Alexandru Popescu',
-    rating: 5,
-    review: 'Profesionalism și promptitudine. Echipa a respectat termenele și lucrarea arată impecabil.',
-    service: 'Curățare Fațadă',
-  },
-  {
-    name: 'Elena Dumitrescu',
-    rating: 5,
-    review: 'Am fost plăcut surprinsă de rezultat. Terasa mea a fost curățată rapid și eficient.',
-    service: 'Curățare Teras',
-  },
-];
-
-// Define before/after gallery items
-const galleryItems = [
-  { emoji: '🏠', title: 'Alee înainte', subtitle: 'Suprafață cu mușchi' },
-  { emoji: '✨', title: 'Alee după', subtitle: 'Curățată profesional' },
-  { emoji: '🏢', title: 'Fațadă înainte', subtitle: 'Culoare pătată' },
-  { emoji: '🌟', title: 'Fațadă după', subtitle: 'Aspect nou' },
-  { emoji: '🌳', title: 'Terasă înainte', subtitle: 'Strat gros de murdărie' },
-  { emoji: '💎', title: 'Terasă după', subtitle: 'Suprafață curată' },
-];
-
-export default async function LandingPage({
+export default function LandingPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  const currentLocale = locale as Locale;
+  const t = useTranslations('landing');
+  const tCommon = useTranslations('common');
+  const pathname = usePathname();
 
-  // const t = await getTranslations('hero');
+  // Get current locale from URL path
+  const pathSegments = pathname.split('/').filter(Boolean);
+  const currentLocale: Locale = pathSegments[0] === 'en' ? 'en' : 'ro';
+
+  // Define services array dynamically based on translations
+  const services: ServiceCardProps[] = [
+    {
+      title: currentLocale === 'en' ? 'Driveway Cleaning' : t('items.curatareAlei.title'),
+      description: currentLocale === 'en' ? 'Effective removal of moss, algae, and stains from concrete and gravel driveways.' : t('items.curatareAlei.description'),
+      priceRange: '5-8',
+      icon: <Zap className="h-6 w-6 text-primary" />,
+      slug: 'curatare-alei',
+    },
+    {
+      title: currentLocale === 'en' ? 'Exterior Wall Cleaning' : t('items.curatarePereti.title'),
+      description: currentLocale === 'en' ? 'Restoring the original appearance of exterior walls with professional washing equipment.' : t('items.curatarePereti.description'),
+      priceRange: '8-12',
+      icon: <Shield className="h-6 w-6 text-primary" />,
+      slug: 'curatare-pereti',
+    },
+    {
+      title: currentLocale === 'en' ? 'Deck Cleaning' : t('items.curatareTerase.title'),
+      description: currentLocale === 'en' ? 'Clean and safe decks, perfect for immediate use after treatment.' : t('items.curatareTerase.description'),
+      priceRange: '6-10',
+      icon: <Award className="h-6 w-6 text-primary" />,
+      slug: 'curatare-terase',
+    },
+    {
+      title: currentLocale === 'en' ? 'Facade Cleaning' : t('items.curatareFatada.title'),
+      description: currentLocale === 'en' ? 'Complete facade cleaning services to restore the shine of buildings.' : t('items.curatareFatada.description'),
+      priceRange: '10-15',
+      icon: <Users className="h-6 w-6 text-primary" />,
+      slug: 'curatare-fatada',
+    },
+  ];
+
+  // Define benefits array dynamically based on translations
+  const benefits = [
+    {
+      icon: <Award className="h-8 w-8 text-primary" />,
+      title: currentLocale === 'en' ? 'Professional Equipment' : t('whyUs.benefits.equipment.title'),
+      description: currentLocale === 'en' ? 'We only use high-pressure equipment and certified cleaning products.' : t('whyUs.benefits.equipment.description'),
+    },
+    {
+      icon: <Shield className="h-8 w-8 text-primary" />,
+      title: currentLocale === 'en' ? 'Work Warranty' : t('whyUs.benefits.warranty.title'),
+      description: currentLocale === 'en' ? 'We offer warranty for all our pressure washing services.' : t('whyUs.benefits.warranty.description'),
+    },
+    {
+      icon: <Clock className="h-8 w-8 text-primary" />,
+      title: currentLocale === 'en' ? 'Fast Execution' : t('whyUs.benefits.fast.title'),
+      description: currentLocale === 'en' ? 'Our efficient team completes work in the shortest possible time.' : t('whyUs.benefits.fast.description'),
+    },
+    {
+      icon: <Users className="h-8 w-8 text-primary" />,
+      title: currentLocale === 'en' ? 'Experience' : t('whyUs.benefits.experience.title'),
+      description: currentLocale === 'en' ? 'Over 10 years of experience in professional cleaning.' : t('whyUs.benefits.experience.description'),
+    },
+  ];
+
+  // Define steps array dynamically based on translations
+  const steps = [
+    {
+      number: 1,
+      title: currentLocale === 'en' ? 'Request a Quote' : t('howItWorks.steps.1.title'),
+      description: currentLocale === 'en' ? 'Contact us for a free personalized quote based on your needs.' : t('howItWorks.steps.1.description'),
+    },
+    {
+      number: 2,
+      title: currentLocale === 'en' ? 'Scheduling' : t('howItWorks.steps.2.title'),
+      description: currentLocale === 'en' ? 'Together we set the most suitable date and time for the work.' : t('howItWorks.steps.2.description'),
+    },
+    {
+      number: 3,
+      title: currentLocale === 'en' ? 'Execution & Warranty' : t('howItWorks.steps.3.title'),
+      description: currentLocale === 'en' ? 'We perform the work professionally and offer warranty for results.' : t('howItWorks.steps.3.description'),
+    },
+  ];
+
+  // Define testimonials array dynamically based on translations
+  const testimonials = [
+    {
+      name: 'Maria Ionescu',
+      rating: 5,
+      review: currentLocale === 'en' ? 'Excellent service! My driveway looks like new after cleaning. Highly recommend.' : t('testimonials.reviews.maria.review'),
+      service: currentLocale === 'en' ? 'Driveway Cleaning' : t('testimonials.reviews.maria.service'),
+    },
+    {
+      name: 'Alexandru Popescu',
+      rating: 5,
+      review: currentLocale === 'en' ? 'Professionalism and promptness. The team respected deadlines and the work looks impeccable.' : t('testimonials.reviews.alexandru.review'),
+      service: currentLocale === 'en' ? 'Facade Cleaning' : t('testimonials.reviews.alexandru.service'),
+    },
+    {
+      name: 'Elena Dumitrescu',
+      rating: 5,
+      review: currentLocale === 'en' ? 'I was pleasantly surprised by the result. My deck was cleaned quickly and efficiently.' : t('testimonials.reviews.elena.review'),
+      service: currentLocale === 'en' ? 'Deck Cleaning' : t('testimonials.reviews.elena.service'),
+    },
+  ];
+
+  // Define before/after gallery items dynamically based on translations
+  const galleryItems = [
+    { emoji: '🏠', title: currentLocale === 'en' ? 'Driveway Before' : t('gallery.items.beforeAlley.title'), subtitle: currentLocale === 'en' ? 'Surface with moss' : t('gallery.items.beforeAlley.subtitle') },
+    { emoji: '✨', title: currentLocale === 'en' ? 'Driveway After' : t('gallery.items.afterAlley.title'), subtitle: currentLocale === 'en' ? 'Professionally cleaned' : t('gallery.items.afterAlley.subtitle') },
+    { emoji: '🏢', title: currentLocale === 'en' ? 'Facade Before' : t('gallery.items.beforeFacade.title'), subtitle: currentLocale === 'en' ? 'Stained color' : t('gallery.items.beforeFacade.subtitle') },
+    { emoji: '🌟', title: currentLocale === 'en' ? 'Facade After' : t('gallery.items.afterFacade.title'), subtitle: currentLocale === 'en' ? 'New look' : t('gallery.items.afterFacade.subtitle') },
+    { emoji: '🌳', title: currentLocale === 'en' ? 'Deck Before' : t('gallery.items.beforeTerrace.title'), subtitle: currentLocale === 'en' ? 'Thick dirt layer' : t('gallery.items.beforeTerrace.subtitle') },
+    { emoji: '💎', title: currentLocale === 'en' ? 'Deck After' : t('gallery.items.afterTerrace.title'), subtitle: currentLocale === 'en' ? 'Clean surface' : t('gallery.items.afterTerrace.subtitle') },
+  ];
 
   return (
     <>
@@ -134,9 +141,9 @@ export default async function LandingPage({
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Serviciile Noastre</h2>
+            <h2 className="text-3xl font-bold mb-4">{t('services.title')}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Oferim servicii profesionale de curățare cu presiune pentru toate tipurile de suprafețe exterioare.
+              {t('services.description')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -147,7 +154,7 @@ export default async function LandingPage({
           <div className="text-center">
             <Button asChild size="lg" variant="outline">
               <Link href={currentLocale === 'en' ? '/en/servicii' : '/servicii'}>
-                {currentLocale === 'en' ? 'View All Services' : 'Vezi Toate Serviciile'}
+                {currentLocale === 'en' ? 'View All Services' : t('services.viewAll')}
               </Link>
             </Button>
           </div>
@@ -158,9 +165,9 @@ export default async function LandingPage({
       <section className="py-16 md:py-24 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">De Ce Noi?</h2>
+            <h2 className="text-3xl font-bold mb-4">{t('whyUs.title')}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Suntem lideri în domeniul curățării cu presiune în Iași.
+              {t('whyUs.description')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -181,9 +188,9 @@ export default async function LandingPage({
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Cum Funcționează</h2>
+            <h2 className="text-3xl font-bold mb-4">{t('howItWorks.title')}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Procesul nostru simplu și eficient în 3 pași.
+              {t('howItWorks.description')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -215,9 +222,9 @@ export default async function LandingPage({
       <section className="py-16 md:py-24 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Înainte și După</h2>
+            <h2 className="text-3xl font-bold mb-4">{t('gallery.title')}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Vezi diferența pe care o putem face.
+              {t('gallery.description')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -238,9 +245,9 @@ export default async function LandingPage({
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Ce Spun Clienții</h2>
+            <h2 className="text-3xl font-bold mb-4">{t('testimonials.title')}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Feedback-ul clienților noștri ne motivează să fim mereu la înălțime.
+              {t('testimonials.description')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -256,12 +263,12 @@ export default async function LandingPage({
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <Search className="h-16 w-16 text-primary mx-auto mb-6" />
-            <h2 className="text-3xl font-bold mb-4">Zona de Acoperire</h2>
+            <h2 className="text-3xl font-bold mb-4">{t('serviceArea.title')}</h2>
             <p className="text-muted-foreground text-lg mb-6">
-              Oferim servicii de curățare cu presiune în Iași și zonele învecinate. Dacă locuiești în Iași sau în localitățile apropiate, suntem disponibili să te ajutăm.
+              {t('serviceArea.description')}
             </p>
             <p className="text-muted-foreground">
-              Contactează-ne pentru a verifica dacă acoperim zona ta și pentru a obține o ofertă personalizată.
+              {t('serviceArea.contactText')}
             </p>
           </div>
         </div>
@@ -272,22 +279,22 @@ export default async function LandingPage({
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Ești Gata să Transformi Spațiul Tău?
+              {t('cta.title')}
             </h2>
             <p className="text-white/90 text-lg mb-8">
-              Contactează-ne astăzi pentru o ofertă gratuită și vezi cum putem face diferența.
+              {t('cta.description')}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button asChild size="lg" variant="secondary">
                 <Link href={currentLocale === 'en' ? '/en/solicita-oferta' : '/solicita-oferta'}>
                   <FileText className="mr-2 h-4 w-4" />
-                  {currentLocale === 'en' ? 'Request a Quote' : 'Solicită o Ofertă'}
+                  {currentLocale === 'en' ? 'Request a Quote' : t('cta.quoteButton')}
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
                 <a href="tel:07XXXXXXXX">
                   <Phone className="mr-2 h-4 w-4" />
-                  07XX XXX XXX
+                  {t('cta.phoneButton')}
                 </a>
               </Button>
             </div>

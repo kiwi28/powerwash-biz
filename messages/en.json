@@ -18,6 +18,387 @@
     "cancel": "Cancel",
     "next": "Next",
     "back": "Back",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "from": "From",
+    "pricePerSqm": "RON/m²",
+    "mp": "sqm"
+  },
+  "footer": {
+    "brandDescription": "Professional pressure washing services in Iași. Transform your outdoor spaces with our superior quality services.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "followUs": "Follow Us",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "allRightsReserved": "All rights reserved.",
+    "phone": "07XX XXX XXX",
+    "email": "contact@powerwash.ro",
+    "location": "Iași, Romania"
+  },
+  "form": {
+    "title": "Request a Quote",
+    "description": "Fill out the form to receive a personalized quote",
+    "steps": {
+      "personalInfo": "Personal Information",
+      "serviceDetails": "Service Details",
+      "notes": "Additional Notes"
+    },
+    "fields": {
+      "fullName": {
+        "label": "Full Name",
+        "placeholder": "John Doe"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "0712345678"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "john@example.com"
+      },
+      "address": {
+        "label": "Address",
+        "placeholder": "Example Street no. 10, Iași"
+      },
+      "serviceType": {
+        "label": "Service Type",
+        "placeholder": "Choose service type",
+        "options": {
+          "alei": "Driveway Cleaning",
+          "pereti": "Exterior Wall Cleaning",
+          "terase": "Deck Cleaning",
+          "fatada": "Facade Cleaning",
+          "alta": "Other"
+        }
+      },
+      "surfaceArea": {
+        "label": "Surface Area (sqm)"
+      },
+      "surfaceType": {
+        "label": "Surface Type",
+        "placeholder": "Choose surface type",
+        "options": {
+          "beton": "Concrete",
+          "pietra": "Stone",
+          "lemn": "Wood",
+          "gips": "Gypsum",
+          "alta": "Other"
+        }
+      },
+      "preferredDate": {
+        "label": "Preferred Date"
+      },
+      "preferredTime": {
+        "label": "Preferred Time",
+        "placeholder": "Choose preferred time",
+        "options": {
+          "dimineata": "Morning",
+          "pranz": "Noon",
+          "dupa-amiaza": "Afternoon"
+        }
+      },
+      "urgency": {
+        "label": "Urgency",
+        "placeholder": "Choose urgency level",
+        "options": {
+          "normala": "Normal",
+          "urgenta": "Urgent",
+          "foarte-urgenta": "Very Urgent"
+        }
+      },
+      "notes": {
+        "label": "Notes (Optional)",
+        "placeholder": "Any other details you would like to mention..."
+      }
+    },
+    "errors": {
+      "fullName": "Name must be at least 2 characters",
+      "phone": "Phone number must be a valid Romanian number",
+      "email": "Email must be valid",
+      "address": "Address must be at least 5 characters",
+      "surfaceArea": "Surface area is required",
+      "preferredDate": "Preferred date is required",
+      "submitError": "An error occurred. Please try again."
+    },
+    "summary": {
+      "title": "Request Summary",
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "service": "Service",
+      "surface": "Surface",
+      "date": "Date",
+      "time": "Time",
+      "urgency": "Urgency",
+      "notes": "Notes"
+    },
+    "buttons": {
+      "back": "Back",
+      "continue": "Continue",
+      "submitting": "Submitting...",
+      "submit": "Submit Request"
+    },
+    "success": {
+      "title": "Request Submitted!",
+      "message": "Thank you for your request. We will contact you shortly to discuss the details.",
+      "close": "Close"
+    }
+  },
+  "serviceCard": {
+    "price": "From",
+    "priceUnit": "RON/sqm"
+  },
+  "landing": {
+    "services": {
+      "title": "Our Services",
+      "description": "We offer professional pressure washing services for all types of outdoor surfaces.",
+      "viewAll": "View All Services"
+    },
+    "items": {
+      "curatareAlei": {
+        "title": "Driveway Cleaning",
+        "description": "Effective removal of moss, algae, and stains from concrete and gravel driveways."
+      },
+      "curatarePereti": {
+        "title": "Exterior Wall Cleaning",
+        "description": "Restoring the original appearance of exterior walls with professional washing equipment."
+      },
+      "curatareTerase": {
+        "title": "Deck Cleaning",
+        "description": "Clean and safe decks, perfect for immediate use after treatment."
+      },
+      "curatareFatada": {
+        "title": "Facade Cleaning",
+        "description": "Complete facade cleaning services to restore the shine of buildings."
+      }
+    },
+    "whyUs": {
+      "title": "Why Choose Us?",
+      "description": "We are leaders in pressure washing in Iași.",
+      "benefits": {
+        "equipment": {
+          "title": "Professional Equipment",
+          "description": "We only use high-pressure equipment and certified cleaning products."
+        },
+        "warranty": {
+          "title": "Work Warranty",
+          "description": "We offer warranty for all our pressure washing services."
+        },
+        "fast": {
+          "title": "Fast Execution",
+          "description": "Our efficient team completes work in the shortest possible time."
+        },
+        "experience": {
+          "title": "Experience",
+          "description": "Over 10 years of experience in professional cleaning."
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "description": "Our simple and efficient 3-step process.",
+      "steps": {
+        "1": {
+          "title": "Request a Quote",
+          "description": "Contact us for a free personalized quote based on your needs."
+        },
+        "2": {
+          "title": "Scheduling",
+          "description": "Together we set the most suitable date and time for the work."
+        },
+        "3": {
+          "title": "Execution & Warranty",
+          "description": "We perform the work professionally and offer warranty for results."
+        }
+      }
+    },
+    "gallery": {
+      "title": "Before and After",
+      "description": "See the difference we can make.",
+      "items": {
+        "beforeAlley": {
+          "title": "Driveway Before",
+          "subtitle": "Surface with moss"
+        },
+        "afterAlley": {
+          "title": "Driveway After",
+          "subtitle": "Professionally cleaned"
+        },
+        "beforeFacade": {
+          "title": "Facade Before",
+          "subtitle": "Stained color"
+        },
+        "afterFacade": {
+          "title": "Facade After",
+          "subtitle": "New look"
+        },
+        "beforeTerrace": {
+          "title": "Deck Before",
+          "subtitle": "Thick dirt layer"
+        },
+        "afterTerrace": {
+          "title": "Deck After",
+          "subtitle": "Clean surface"
+        }
+      }
+    },
+    "testimonials": {
+      "title": "What Clients Say",
+      "description": "Our clients' feedback motivates us to always be at our best.",
+      "reviews": {
+        "maria": {
+          "name": "Maria Ionescu",
+          "review": "Excellent service! My driveway looks like new after cleaning. Highly recommend.",
+          "service": "Driveway Cleaning"
+        },
+        "alexandru": {
+          "name": "Alexandru Popescu",
+          "review": "Professionalism and promptness. The team respected deadlines and the work looks impeccable.",
+          "service": "Facade Cleaning"
+        },
+        "elena": {
+          "name": "Elena Dumitrescu",
+          "review": "I was pleasantly surprised by the result. My deck was cleaned quickly and efficiently.",
+          "service": "Deck Cleaning"
+        }
+      }
+    },
+    "serviceArea": {
+      "title": "Service Area",
+      "description": "We offer pressure washing services in Iași and surrounding areas. If you live in Iași or nearby locations, we are available to help you.",
+      "contactText": "Contact us to verify if we cover your area and to get a personalized quote."
+    },
+    "cta": {
+      "title": "Ready to Transform Your Space?",
+      "description": "Contact us today for a free quote and see how we can make the difference.",
+      "quoteButton": "Request a Quote",
+      "phoneButton": "07XX XXX XXX"
+    }
+  },
+  "servicesPage": {
+    "intro": {
+      "title": "Our Services",
+      "description": "We offer professional pressure washing services for all types of outdoor surfaces. With high-quality equipment and an experienced team, we guarantee impeccable results."
+    },
+    "mainServices": {
+      "title": "Main Services",
+      "description": "Discover our full range of professional cleaning services."
+    },
+    "details": {
+      "title": "Service Details",
+      "description": "Learn more about each service and answers to frequently asked questions.",
+      "detailsLabel": "Complete Service Details",
+      "faqLabel": "Frequently Asked Questions",
+      "priceLabel": "Price"
+    },
+    "serviceItems": {
+      "alei": {
+        "title": "Driveway Cleaning",
+        "description": "Effective removal of moss, algae, and stains from concrete and gravel driveways.",
+        "details": "Our driveway cleaning service is the ideal solution for restoring the clean and welcoming appearance of your driveways. We use professional pressure washing equipment that effectively eliminates:\n\n• Moss and algae that accumulate over time\n• Oil stains and other substances\n• Dust and deposited dirt\n• Organic debris and plant residues\n\nOur cleaning process respects the integrity of your surface, whether it's concrete, gravel, natural pavement, or other materials. Our team has experience in treating all types of driveways and entrances.\n\nAfter cleaning, your driveway will be safe for pedestrian and vehicular traffic, eliminating the risk of slipping caused by moss or excessive humidity.",
+        "faq": [
+          {
+            "q": "How long does driveway cleaning take?",
+            "a": "The time required depends on the size of the driveway and the degree of dirt. In general, a medium-sized driveway (20-30 sqm) can be cleaned in 1-2 hours."
+          },
+          {
+            "q": "Is it safe for nearby plants?",
+            "a": "Yes, we use techniques and products that do not affect plants and the surrounding environment. We can protect sensitive areas before starting the work."
+          },
+          {
+            "q": "Does cleaning affect the driveway's waterproofing?",
+            "a": "No, our procedure maintains the integrity of the surface. If there are pre-existing waterproofing issues, we can recommend repairs before cleaning."
+          }
+        ]
+      },
+      "pereti": {
+        "title": "Exterior Wall Cleaning",
+        "description": "Restoring the original appearance of exterior walls with professional washing equipment.",
+        "details": "Our exterior wall cleaning service brings back the original beauty of your building. Exterior walls are constantly exposed to the elements, accumulating:\n\n• Dust and atmospheric pollution\n• Mold stains and algae\n• Water streaks and water stains\n• Bird droppings\n• Grease and residues from installations\n\nOur team uses adjusted high-pressure equipment to clean effectively without damaging the walls' finish. We treat each type of surface (brick, concrete, wood, plaster) with specific techniques.\n\nRegular cleaning of exterior walls not only improves aesthetics but also extends the life of finishes and prevents deterioration caused by accumulated dirt.",
+        "faq": [
+          {
+            "q": "Can brick walls be cleaned without affecting the joints?",
+            "a": "Yes, we adjust the pressure and cleaning techniques based on the material. For brick and sensitive joints, we use delicate but effective methods."
+          },
+          {
+            "q": "Is cleaning necessary before painting?",
+            "a": "Absolutely. Cleaning walls before painting ensures optimal paint adhesion and a durable result. It's an essential step in surface preparation."
+          },
+          {
+            "q": "Does cleaning work on wooden walls?",
+            "a": "Yes, we have experience cleaning exterior wooden walls. We use adjusted pressure and products compatible with wood to avoid damage."
+          }
+        ]
+      },
+      "terase": {
+        "title": "Deck Cleaning",
+        "description": "Clean and safe decks, perfect for immediate use after treatment.",
+        "details": "A clean deck is a usable deck. Our deck cleaning service transforms your outdoor space into a perfect area for relaxation and socializing. We eliminate:\n\n• Layers of dirt and dust\n• Algae and moss that create slippery surfaces\n• Food, drink, and grill stains\n• Plant residues and pollen\n• Deposits from rain and wind\n\nWhether your deck is wood, ceramic, natural stone, or composite materials, we have the necessary expertise to clean it efficiently and safely.\n\nAfter cleaning, the deck will be ready for immediate use. For wooden decks, we can also recommend applying protective products to extend the material's life.",
+        "faq": [
+          {
+            "q": "How long does cleaning a medium deck take?",
+            "a": "A deck of 20-30 sqm can be cleaned in 2-3 hours, depending on the degree of dirt and the type of material."
+          },
+          {
+            "q": "Do I need to move furniture off the deck?",
+            "a": "We prefer that furniture be moved or covered. If you can't do this, our team can carefully move the furniture before starting the cleaning."
+          },
+          {
+            "q": "Will wooden decks need retightening after cleaning?",
+            "a": "Cleaning doesn't affect the integrity of the wood. However, for decks constantly exposed to the sun, we recommend applying protective oil or lac periodically."
+          }
+        ]
+      },
+      "garduri": {
+        "title": "Fence Cleaning",
+        "description": "Complete fence cleaning services to restore shine and aesthetic appearance.",
+        "details": "Your fence is the first visual impression of your property. Our fence cleaning service restores the beauty and integrity of fences. We efficiently clean:\n\n• Dust deposits and pollution\n• Moss and algae that affect appearance\n• Old paint stains or other contaminants\n• Plant residues and bird droppings\n• Oxidation and discoloration\n\nOur team has experience cleaning all types of fences: wood, metal, PVC, concrete, or combined materials. Each material requires a specific approach that we apply with professionalism.\n\nA clean fence not only looks better but is also more durable. Removing harmful deposits prevents premature deterioration and reduces the need for costly repairs.",
+        "faq": [
+          {
+            "q": "Can old and deteriorated fences be cleaned?",
+            "a": "Yes, we can clean fences in any condition. However, for fences with significant damage, we recommend repairs before cleaning to avoid aggravating problems."
+          },
+          {
+            "q": "Does cleaning affect existing paint on the fence?",
+            "a": "If the paint is in good condition, cleaning doesn't affect it. For areas with peeling paint, we recommend refreshing the finish after cleaning."
+          },
+          {
+            "q": "Is cleaning necessary before painting the fence?",
+            "a": "It's absolutely necessary. Painting a dirty fence doesn't adhere correctly and results are short-lived. Cleaning is the first essential step in any repainting process."
+          }
+        ]
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Space?",
+      "description": "Contact us today for a free personalized quote and see how we can make the difference.",
+      "button": "Request a Quote"
+    }
+  },
+  "quotePage": {
+    "title": "Request a Quote",
+    "description": "Fill out the form below to receive a personalized quote for pressure washing services.",
+    "whatHappens": {
+      "title": "What happens after you submit your request?",
+      "steps": {
+        "1": {
+          "title": "We Analyze Your Request",
+          "description": "Our team will analyze the submitted details and prepare a personalized quote."
+        },
+        "2": {
+          "title": "We Contact You",
+          "description": "We will contact you shortly to discuss details and arrange a visit."
+        },
+        "3": {
+          "title": "Execution",
+          "description": "After accepting the quote, we will schedule and execute the work professionally."
+        }
+      }
+    },
+    "questions": {
+      "title": "Have questions?",
+      "description": "If you have questions or prefer to contact us directly, we are available:"
+    }
   }
 }

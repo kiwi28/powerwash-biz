@@ -18,6 +18,387 @@
     "cancel": "Anulează",
     "next": "Continuă",
     "back": "Înapoi",
-    "loading": "Încărcare..."
+    "loading": "Încărcare...",
+    "from": "De la",
+    "pricePerSqm": "RON/m²",
+    "mp": "mp"
+  },
+  "footer": {
+    "brandDescription": "Servicii profesionale de spălare cu presiune în Iași. Transformați spațiile exterioare cu serviciile noastre de calitate superioară.",
+    "quickLinks": "Link-uri Rapide",
+    "contact": "Contact",
+    "followUs": "Urmărește-ne",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "allRightsReserved": "Toate drepturile rezervate.",
+    "phone": "07XX XXX XXX",
+    "email": "contact@powerwash.ro",
+    "location": "Iași, România"
+  },
+  "form": {
+    "title": "Solicită o Ofertă",
+    "description": "Completează formularul pentru a primi o ofertă personalizată",
+    "steps": {
+      "personalInfo": "Informații Personale",
+      "serviceDetails": "Detalii Serviciu",
+      "notes": "Note Adiționale"
+    },
+    "fields": {
+      "fullName": {
+        "label": "Nume Complet",
+        "placeholder": "Ion Popescu"
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "0712345678"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "ion@example.com"
+      },
+      "address": {
+        "label": "Adresă",
+        "placeholder": "Strada Exemplului nr. 10, Iași"
+      },
+      "serviceType": {
+        "label": "Tip de Serviciu",
+        "placeholder": "Alegeți tipul de serviciu",
+        "options": {
+          "alei": "Curățare Alei",
+          "pereti": "Curățare Pereți Exteriori",
+          "terase": "Curățare Terasă",
+          "fatada": "Curățare Fațadă",
+          "alta": "Altul"
+        }
+      },
+      "surfaceArea": {
+        "label": "Suprafață (mp)"
+      },
+      "surfaceType": {
+        "label": "Tip de Suprafață",
+        "placeholder": "Alegeți tipul de suprafață",
+        "options": {
+          "beton": "Beton",
+          "pietra": "Piatră",
+          "lemn": "Lemn",
+          "gips": "Gips",
+          "alta": "Altul"
+        }
+      },
+      "preferredDate": {
+        "label": "Data Preferată"
+      },
+      "preferredTime": {
+        "label": "Ora Preferată",
+        "placeholder": "Alegeți ora preferată",
+        "options": {
+          "dimineata": "Dimineața",
+          "pranz": "Prânz",
+          "dupa-amiaza": "După-amiaza"
+        }
+      },
+      "urgency": {
+        "label": "Urgență",
+        "placeholder": "Alegeți nivelul de urgență",
+        "options": {
+          "normala": "Normală",
+          "urgenta": "Urgentă",
+          "foarte-urgenta": "Foarte Urgentă"
+        }
+      },
+      "notes": {
+        "label": "Observații (Opțional)",
+        "placeholder": "Orice alte detalii pe care doriți să le menționați..."
+      }
+    },
+    "errors": {
+      "fullName": "Numele trebuie să aibă cel puțin 2 caractere",
+      "phone": "Numărul de telefon trebuie să fie un număr valid din România",
+      "email": "Email-ul trebuie să fie valid",
+      "address": "Adresa trebuie să aibă cel puțin 5 caractere",
+      "surfaceArea": "Suprafața este obligatorie",
+      "preferredDate": "Data preferată este obligatorie",
+      "submitError": "A apărut o eroare. Vă rugăm încercați din nou."
+    },
+    "summary": {
+      "title": "Rezumat Cerere",
+      "name": "Nume",
+      "phone": "Telefon",
+      "email": "Email",
+      "address": "Adresă",
+      "service": "Serviciu",
+      "surface": "Suprafață",
+      "date": "Data",
+      "time": "Ora",
+      "urgency": "Urgență",
+      "notes": "Note"
+    },
+    "buttons": {
+      "back": "Înapoi",
+      "continue": "Continuă",
+      "submitting": "Se trimite...",
+      "submit": "Trimite Cererea"
+    },
+    "success": {
+      "title": "Cerere Trimisă!",
+      "message": "Vă mulțumim pentru solicitare. Vă vom contacta în cel mai scurt timp pentru a stabili detaliile.",
+      "close": "Închide"
+    }
+  },
+  "serviceCard": {
+    "price": "De la",
+    "priceUnit": "RON/m²"
+  },
+  "landing": {
+    "services": {
+      "title": "Serviciile Noastre",
+      "description": "Oferim servicii profesionale de curățare cu presiune pentru toate tipurile de suprafețe exterioare.",
+      "viewAll": "Vezi Toate Serviciile"
+    },
+    "items": {
+      "curatareAlei": {
+        "title": "Curățare Alei",
+        "description": "Îndepărtare eficientă a mușchiului, a algelor și a petelor de pe aleile de beton și pietriș."
+      },
+      "curatarePereti": {
+        "title": "Curățare Pereți Exteriori",
+        "description": "Restaurarea aspectului original al pereților exteriori cu echipamente profesionale de spălare."
+      },
+      "curatareTerase": {
+        "title": "Curățare Teras",
+        "description": "Terase curate și sigure, perfecte pentru utilizare imediată după tratament."
+      },
+      "curatareFatada": {
+        "title": "Curățare Fațadă",
+        "description": "Servicii complete de curățare a fațadelor pentru a reda strălucirea clădirilor."
+      }
+    },
+    "whyUs": {
+      "title": "De Ce Noi?",
+      "description": "Suntem lideri în domeniul curățării cu presiune în Iași.",
+      "benefits": {
+        "equipment": {
+          "title": "Echipament Profesional",
+          "description": "Utilizăm doar echipamente de înaltă presiune și produse de curățare certificate."
+        },
+        "warranty": {
+          "title": "Garanție a Lucrării",
+          "description": "Oferim garanție pentru toate serviciile noastre de curățare cu presiune."
+        },
+        "fast": {
+          "title": "Execuție Rapidă",
+          "description": "Echipa noastră eficientă realizează lucrările în cel mai scurt timp posibil."
+        },
+        "experience": {
+          "title": "Experiență",
+          "description": "Peste 10 ani de experiență în domeniul curățării profesionale."
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "Cum Funcționează",
+      "description": "Procesul nostru simplu și eficient în 3 pași.",
+      "steps": {
+        "1": {
+          "title": "Solicită o Ofertă",
+          "description": "Contactează-ne pentru o ofertă gratuită personalizată în funcție de nevoile tale."
+        },
+        "2": {
+          "title": "Programare",
+          "description": "Stabilim împreună data și ora celei mai potrivite pentru executarea lucrării."
+        },
+        "3": {
+          "title": "Execuție și Garanție",
+          "description": "Realizăm lucrarea profesional și oferim garanție pentru rezultate."
+        }
+      }
+    },
+    "gallery": {
+      "title": "Înainte și După",
+      "description": "Vezi diferența pe care o putem face.",
+      "items": {
+        "beforeAlley": {
+          "title": "Alee înainte",
+          "subtitle": "Suprafață cu mușchi"
+        },
+        "afterAlley": {
+          "title": "Alee după",
+          "subtitle": "Curățată profesional"
+        },
+        "beforeFacade": {
+          "title": "Fațadă înainte",
+          "subtitle": "Culoare pătată"
+        },
+        "afterFacade": {
+          "title": "Fațadă după",
+          "subtitle": "Aspect nou"
+        },
+        "beforeTerrace": {
+          "title": "Terasă înainte",
+          "subtitle": "Strat gros de murdărie"
+        },
+        "afterTerrace": {
+          "title": "Terasă după",
+          "subtitle": "Suprafață curată"
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Ce Spun Clienții",
+      "description": "Feedback-ul clienților noștri ne motivează să fim mereu la înălțime.",
+      "reviews": {
+        "maria": {
+          "name": "Maria Ionescu",
+          "review": "Serviciu excelent! Aleea mea arată ca nouă după curățare. Recomand cu încredere.",
+          "service": "Curățare Alei"
+        },
+        "alexandru": {
+          "name": "Alexandru Popescu",
+          "review": "Profesionalism și promptitudine. Echipa a respectat termenele și lucrarea arată impecabil.",
+          "service": "Curățare Fațadă"
+        },
+        "elena": {
+          "name": "Elena Dumitrescu",
+          "review": "Am fost plăcut surprinsă de rezultat. Terasa mea a fost curățată rapid și eficient.",
+          "service": "Curățare Teras"
+        }
+      }
+    },
+    "serviceArea": {
+      "title": "Zona de Acoperire",
+      "description": "Oferim servicii de curățare cu presiune în Iași și zonele învecinate. Dacă locuiești în Iași sau în localitățile apropiate, suntem disponibili să te ajutăm.",
+      "contactText": "Contactează-ne pentru a verifica dacă acoperim zona ta și pentru a obține o ofertă personalizată."
+    },
+    "cta": {
+      "title": "Ești Gata să Transformi Spațiul Tău?",
+      "description": "Contactează-ne astăzi pentru o ofertă gratuită și vezi cum putem face diferența.",
+      "quoteButton": "Solicită o Ofertă",
+      "phoneButton": "07XX XXX XXX"
+    }
+  },
+  "servicesPage": {
+    "intro": {
+      "title": "Serviciile Noastre",
+      "description": "Oferim servicii profesionale de curățare cu presiune pentru toate tipurile de suprafețe exterioare. Cu echipamente de înaltă calitate și o echipă experimentată, garantăm rezultate impecabile."
+    },
+    "mainServices": {
+      "title": "Serviciile Principale",
+      "description": "Descoperă gama noastră completă de servicii de curățare profesională."
+    },
+    "details": {
+      "title": "Detalii Servicii",
+      "description": "Află mai multe despre fiecare serviciu și răspunsuri la întrebări frecvente.",
+      "detailsLabel": "Detalii Complete Serviciu",
+      "faqLabel": "Întrebări Frecvente",
+      "priceLabel": "Preț"
+    },
+    "serviceItems": {
+      "alei": {
+        "title": "Curățare Alei",
+        "description": "Îndepărtare eficientă a mușchiului, a algelor și a petelor de pe aleile de beton și pietriș.",
+        "details": "Serviciul nostru de curățare a aleilor este soluția ideală pentru a reda aspectul curat și primitor aleilor tale. Folosim echipamente profesionale de spălare cu presiune care elimină eficient:\n\n• Mușchiul și algele care se acumulează în timp\n• Petele de ulei și alte substanțe\n• Praful și murdăria depusă\n• Debris-ul organic și resturile vegetale\n\nProcesul de curățare respectă integritatea suprafeței tale, fie că este vorba de beton, pietriș, pavaj natural sau alte materiale. Echipa noastră are experiență în tratarea tuturor tipurilor de alei și intrări.\n\nDupă curățare, aleea ta va fi sigură pentru circulație pietonală și auto, eliminând riscul de alunecare cauzat de mușchi sau umiditate excesivă.",
+        "faq": [
+          {
+            "q": "Cât durează curățarea unei alei?",
+            "a": "Timpul necesar depinde de dimensiunea aleei și de gradul de murdărie. În general, o alee de dimensiuni medii (20-30 m²) poate fi curățată în 1-2 ore."
+          },
+          {
+            "q": "Este sigur pentru plantele din apropiere?",
+            "a": "Da, folosim tehnici și produse care nu afectează plantele și mediul înconjurător. Putem proteja zonele sensibile înainte de începerea lucrării."
+          },
+          {
+            "q": "Curățarea afectează etanșeitatea aleei?",
+            "a": "Nu, procedura noastră menține integritatea suprafeței. Dacă există probleme de etanșeitate preexistente, vă putem recomanda reparații înainte de curățare."
+          }
+        ]
+      },
+      "pereti": {
+        "title": "Curățare Pereți Exteriori",
+        "description": "Restaurarea aspectului original al pereților exteriori cu echipamente profesionale de spălare.",
+        "details": "Serviciul de curățare a pereților exteriori readuce frumusețea originală a clădirii tale. Pereții exteriori sunt expuși constant la elementele naturii, acumulând:\n\n• Praful și poluarea atmosferică\n• Pete de mucegai și alge\n• Cearcăne de ploaie și pete de apă\n• Dejectări de păsări\n• Grăsime și reziduuri de la instalații\n\nEchipa noastră utilizează echipamente de înaltă presiune ajustate pentru a curăța eficient fără a deteriora finisajul pereților. Tratăm fiecare tip de suprafață (cărămidă, beton, lemn, tencuială) cu tehnici specifice.\n\nCurățarea regulată a pereților exteriori nu doar îmbunătățește estetica, ci și prelungesc durata de viață a finisajelor și previne deteriorarea cauzată de acumularea de murdărie.",
+        "faq": [
+          {
+            "q": "Pot fi curățați pereții de cărămidă fără a afecta rosturile?",
+            "a": "Da, ajustăm presiunea și tehnicile de curățare în funcție de material. Pentru cărămidă și rosturi sensibile, folosim metode delicate dar eficiente."
+          },
+          {
+            "q": "Este necesară curățarea înainte de vopsire?",
+            "a": "Absolut. Curățarea pereților înainte de vopsire asigură o aderență optimă a vopselei și un rezultat durabil. Este un pas esențial în pregătirea suprafeței."
+          },
+          {
+            "q": "Curățarea funcționează pe pereți de lemn?",
+            "a": "Da, avem experiență în curățarea pereților de lemn exteriori. Folosim presiune ajustată și produse compatibile cu lemnul pentru a evita deteriorarea."
+          }
+        ]
+      },
+      "terase": {
+        "title": "Curățare Teras",
+        "description": "Terase curate și sigure, perfecte pentru utilizare imediată după tratament.",
+        "details": "O terasă curată este o terasă utilizabilă. Serviciul nostru de curățare a teraselor transformă spațiul tău exterior într-o zonă perfectă pentru relaxare și socializare. Eliminăm:\n\n• Straturile de murdărie și praf\n• Algele și mușchiul care creează suprafețe alunecoase\n• Petele de mâncare, băuturi și grătar\n• Resturile vegetale și polenul\n• Depunerile de la ploaie și vânt\n\nFie că terasa ta este din lemn, ceramică, piatră naturală sau materiale compozite, avem expertiza necesară pentru a o curăța eficient și în siguranță.\n\nDupă curățare, terasa va fi gata de utilizare imediată. Pentru terase din lemn, vă putem recomanda și aplicarea de produse de protecție pentru a prelungi durata de viață a materialului.",
+        "faq": [
+          {
+            "q": "Cât durează curățarea unei terase medii?",
+            "a": "O terasă de 20-30 m² poate fi curățată în 2-3 ore, în funcție de gradul de murdărie și de tipul materialului."
+          },
+          {
+            "q": "Este nevoie să mă mut din mobilierul de pe terasă?",
+            "a": "Preferăm ca mobilierul să fie mutat sau acoperit. Dacă nu puteți face acest lucru, echipa noastră poate muta mobilierul cu grijă înainte de a începe curățarea."
+          },
+          {
+            "q": "Tersele din lemn vor trebui retensionate după curățare?",
+            "a": "Curățarea nu afectează integritatea lemnului. Totuși, pentru terasele exposite constant la soare, recomandăm aplicarea unui ulei sau lac protector periodic."
+          }
+        ]
+      },
+      "garduri": {
+        "title": "Curățare Garduri",
+        "description": "Servicii complete de curățare a gardurilor pentru a reda strălucirea și aspectul estetic.",
+        "details": "Gardul tău este prima impresie vizuală a proprietății tale. Serviciul nostru de curățare a gardurilor reda frumusețea și integritatea acestora. Curățăm eficient:\n\n• Depunerile de praf și poluare\n• Mușchiul și algele care afectează aspectul\n• Petele de vopsea veche sau alte contaminanți\n• Resturile vegetale și dejectările de păsări\n• Oxidarea și decolorarea\n\nEchipa noastră are experiență în curățarea tuturor tipurilor de garduri: din lemn, metal, PVC, beton sau materiale combinate. Fiecare material necesită o abordare specifică pe care o aplicăm cu profesionalism.\n\nUn gard curat nu doar arată mai bine, ci este și mai durabil. Îndepărtarea depunerilor nocive previne deteriorarea prematură și reduce necesitatea reparațiilor costisitoare.",
+        "faq": [
+          {
+            "q": "Pot fi curățate gardurile vechi și deteriorate?",
+            "a": "Da, putem curăța gardurile în orice stare. Totuși, pentru garduri cu deteriorări semnificative, vă recomandăm reparații înainte de curățare pentru a evita agravarea problemelor."
+          },
+          {
+            "q": "Curățarea afectează vopseaua existentă pe gard?",
+            "a": "Dacă vopseaua este în stare bună, curățarea nu o afectează. Pentru zone cu vopsea decojită, vă recomandăm reîmprospătarea finisajului după curățare."
+          },
+          {
+            "q": "Este necesară curățarea înainte de vopsirea gardului?",
+            "a": "Este absolut necesară. Vopsirea unui gard murdu nu aderă corect și rezultatele sunt de scurtă durată. Curățarea este primul pas esențial în orice proces de revopsire."
+          }
+        ]
+      }
+    },
+    "cta": {
+      "title": "Ești Gata să Transformi Spațiul Tău?",
+      "description": "Contactează-ne astăzi pentru o ofertă gratuită personalizată și vezi cum putem face diferența.",
+      "button": "Solicită o Ofertă"
+    }
+  },
+  "quotePage": {
+    "title": "Solicită o Ofertă",
+    "description": "Completează formularul de mai jos pentru a primi o ofertă personalizată pentru serviciile de curățare cu presiune.",
+    "whatHappens": {
+      "title": "Ce se întâmplă după ce trimiți cererea?",
+      "steps": {
+        "1": {
+          "title": "Analizăm Cererea",
+          "description": "Echipa noastră va analiza detaliile trimise și va pregăti o ofertă personalizată."
+        },
+        "2": {
+          "title": "Te Contactăm",
+          "description": "Te vom contacta în cel mai scurt timp pentru a discuta detaliile și a stabili o vizită."
+        },
+        "3": {
+          "title": "Execuție",
+          "description": "După acceptarea ofertei, vom programa și executa lucrarea profesional."
+        }
+      }
+    },
+    "questions": {
+      "title": "Ai întrebări?",
+      "description": "Dacă ai întrebări sau preferi să ne contactezi direct, suntem disponibili:"
+    }
   }
 }

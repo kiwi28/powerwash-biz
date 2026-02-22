@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export interface ServiceCardProps {
   title: string;
@@ -14,6 +15,8 @@ export interface ServiceCardProps {
 }
 
 export function ServiceCard({ title, description, priceRange, icon, slug }: ServiceCardProps) {
+  const t = useTranslations('serviceCard');
+
   return (
     <Card className="group hover:shadow-lg transition-shadow duration-300">
       <CardHeader>
@@ -25,7 +28,7 @@ export function ServiceCard({ title, description, priceRange, icon, slug }: Serv
       </CardHeader>
       <CardContent>
         <div className="flex items-center justify-between">
-          <span className="text-sm text-muted-foreground">De la {priceRange} RON/m²</span>
+          <span className="text-sm text-muted-foreground">{t('price')} {priceRange} {t('priceUnit')}</span>
           <Link href={`/servicii#${slug}`}>
             <Button variant="ghost" size="icon">
               <ArrowRight className="h-4 w-4" />

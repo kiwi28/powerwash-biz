@@ -38,7 +38,16 @@
       "mcp__plugin_playwright_playwright__browser_resize",
       "mcp__plugin_playwright_playwright__browser_snapshot",
       "mcp__plugin_playwright_playwright__browser_close",
-      "Bash(kill 2127031 2>/dev/null; echo \"Killed background process\")"
+      "Bash(kill 2127031 2>/dev/null; echo \"Killed background process\")",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('messages/ro.json', 'utf8'\\)\\); console.log\\('Valid JSON'\\)\")",
+      "Bash(npx tsc --noEmit 2>&1 | head -50)",
+      "Bash(npx tsc --noEmit 2>&1 | head -30)",
+      "Bash(npx tsc --noEmit 2>&1 | head -20)",
+      "Bash(wc -l /home/alexkiwi/projects/personal/agentic-next-payloadcms/app/[locale]/servicii/page.tsx)",
+      "Bash(npx tsc --noEmit 2>&1 | head -10)",
+      "Bash(npm run build 2>&1 | head -30)",
+      "Bash(npm run build 2>&1 | head -20)",
+      "Bash(npm run build 2>&1 | tail -20)"
     ]
   },
   "enableAllProjectMcpServers": true,
