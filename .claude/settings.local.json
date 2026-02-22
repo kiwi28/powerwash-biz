@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(git -C /home/alexkiwi/projects/personal/agentic-next-payloadcms status)"
+    ]
+  }
+}
