@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "Professional Pressure Washing in Iași",
+    "subheadline": "Transform outdoor spaces with superior quality powerwashing services. Driveways, walls, terraces and more.",
+    "cta": "Get a Quote",
+    "phoneLabel": "Call now:"
+  },
+  "common": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "next": "Next",
+    "back": "Back",
+    "loading": "Loading..."
+  }
+}

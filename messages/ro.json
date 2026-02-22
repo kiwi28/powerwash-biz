@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "home": "Acasă",
+    "services": "Servicii",
+    "portfolio": "Portofoliu",
+    "about": "Despre",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "Curățare Profesională cu Presiune în Iași",
+    "subheadline": "Transformăm spațiile exterioare cu servicii de powerwashing de calitate superioară. Alee, pereți, terase și multe altele.",
+    "cta": "Solicită o Ofertă",
+    "phoneLabel": "Sună acum:"
+  },
+  "common": {
+    "submit": "Trimite",
+    "cancel": "Anulează",
+    "next": "Continuă",
+    "back": "Înapoi",
+    "loading": "Încărcare..."
+  }
+}
