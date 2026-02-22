@@ -1,4 +1,6 @@
-export const GalleryItems = {
+import { CollectionConfig } from 'payload'
+
+export const GalleryItems: CollectionConfig = {
   slug: 'gallery-items',
   admin: {
     useAsTitle: 'caption',

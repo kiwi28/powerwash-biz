@@ -1,4 +1,6 @@
-export const QuoteRequests = {
+import { CollectionConfig } from 'payload'
+
+export const QuoteRequests: CollectionConfig = {
   slug: 'quote-requests',
   admin: {
     useAsTitle: 'fullName',
