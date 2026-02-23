@@ -376,6 +376,218 @@
       "button": "Request a Quote"
     }
   },
+  "about": {
+    "hero": {
+      "title": "About Us",
+      "description": "We are dedicated to transforming outdoor spaces into functional works of art, with professionalism and attention to every detail."
+    },
+    "story": {
+      "title": "Our Story",
+      "subtitle": "From a passion to a successful business",
+      "paragraph1": "Our story began several years ago when we discovered our passion for transforming outdoor spaces. What started as a personal project turned into a family business, built on trust, quality, and customer satisfaction.",
+      "paragraph2": "Over the years, we have completed hundreds of projects, from simple garden paths to complex commercial spaces. Each project taught us something new and helped us perfect our craft.",
+      "paragraph3": "Today, we are proud to be trusted partners for clients across the country, offering paving and outdoor renovation services that exceed expectations."
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Us",
+      "quality": {
+        "title": "Quality",
+        "description": "We use only premium materials and proven techniques for durable results."
+      },
+      "punctuality": {
+        "title": "Punctuality",
+        "description": "We respect deadlines and deliver projects on time, without exceptions."
+      },
+      "professionalism": {
+        "title": "Professionalism",
+        "description": "Our team consists of experts with years of experience in the field."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "Clear offers, no hidden costs, and open communication throughout the project."
+      }
+    },
+    "values": {
+      "title": "Our Values",
+      "excellence": {
+        "title": "Excellence",
+        "description": "We commit to exceeding our customers' expectations through superior quality in every aspect of our work."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "description": "We operate with honesty and transparency in all our business relationships, building long-term trust."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We embrace new technologies and techniques to provide modern and efficient solutions for our customers' needs."
+      },
+      "sustainability": {
+        "title": "Sustainability",
+        "description": "We care about the environment and use sustainable materials and practices wherever possible in our projects."
+      }
+    },
+    "team": {
+      "title": "Our Team and Equipment",
+      "description": "Our professional team, with modern state-of-the-art equipment, is ready to take on any project."
+    },
+    "cta": {
+      "title": "Ready to Start Your Project?",
+      "description": "Contact us today for a free consultation and a personalized quote.",
+      "button": "Contact Us"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "description": "We are here to help you with any questions or to provide you with a personalized quote."
+    },
+    "info": {
+      "phone": {
+        "title": "Phone",
+        "description": "Call us for a quick quote",
+        "number": "+40 712 345 678",
+        "availability": "Available Monday-Friday\n8:00 - 18:00"
+      },
+      "email": {
+        "title": "Email",
+        "description": "Send us an email anytime",
+        "address": "contact@example.com",
+        "responseTime": "Response within 24 hours"
+      },
+      "location": {
+        "title": "Location",
+        "description": "Coverage Area",
+        "area": "Iași and surrounding areas",
+        "details": "We cover Iași County\nand nearby localities"
+      }
+    },
+    "workingHours": {
+      "title": "Working Hours",
+      "mondayFriday": "Monday - Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "closed": "Closed",
+      "emergencyNote": "For emergencies outside business hours, you can call us to arrange a special appointment."
+    },
+    "whatHappens": {
+      "title": "What Happens After You Contact Us?",
+      "steps": {
+        "1": {
+          "title": "Contact",
+          "description": "You contact us by phone, email, or the quote form."
+        },
+        "2": {
+          "title": "Quote",
+          "description": "We prepare a personalized quote within 24 hours."
+        },
+        "3": {
+          "title": "Execution",
+          "description": "We schedule and execute the work professionally and on time."
+        }
+      }
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Us?",
+      "fastResponse": {
+        "title": "Fast Response",
+        "description": "We respond to requests within 24 hours"
+      },
+      "transparentOffers": {
+        "title": "Transparent Offers",
+        "description": "Clear prices, no hidden costs"
+      },
+      "warranty": {
+        "title": "Warranty",
+        "description": "We offer warranty for all services"
+      },
+      "professionalism": {
+        "title": "Professionalism",
+        "description": "Team with over 10 years of experience"
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Space?",
+      "description": "Contact us today for a free quote and see how we can make the difference.",
+      "quoteButton": "Request a Free Quote",
+      "callButton": "Call Now"
+    }
+  },
+  "portfolio": {
+    "hero": {
+      "title": "Portfolio",
+      "description": "Discover our paving and outdoor renovation projects completed with professionalism and attention to detail."
+    },
+    "categories": {
+      "all": "All",
+      "alei": "Driveways",
+      "pereți": "Walls",
+      "terase": "Decks",
+      "comercial": "Commercial"
+    },
+    "gallery": {
+      "items": {
+        "1": {
+          "title": "Premium Paving Driveway",
+          "location": "Bucharest"
+        },
+        "2": {
+          "title": "Modern Garden Wall",
+          "location": "Cluj-Napoca"
+        },
+        "3": {
+          "title": "Design Deck",
+          "location": "Timișoara"
+        },
+        "4": {
+          "title": "Commercial Parking",
+          "location": "Iași"
+        },
+        "5": {
+          "title": "Garden Path",
+          "location": "Brașov"
+        },
+        "6": {
+          "title": "Natural Stone Wall",
+          "location": "Sibiu"
+        },
+        "7": {
+          "title": "Pool Deck",
+          "location": "Constanța"
+        },
+        "8": {
+          "title": "Exhibition Space",
+          "location": "Bucharest"
+        },
+        "9": {
+          "title": "Courtyard Driveway",
+          "location": "Oradea"
+        }
+      }
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "reviews": {
+        "andrei": {
+          "name": "Andrei Popescu",
+          "review": "The team was exceptional. Our driveway looks impeccable!",
+          "service": "Driveway Installation"
+        },
+        "maria": {
+          "name": "Maria Ionescu",
+          "review": "Finished quickly and professionally. Highly recommend!",
+          "service": "Garden Wall"
+        },
+        "cristian": {
+          "name": "Cristian Dumitrescu",
+          "review": "The deck is exactly as we imagined. Excellent quality!",
+          "service": "Premium Deck"
+        }
+      }
+    },
+    "cta": {
+      "button": "Request a Free Quote"
+    }
+  },
   "quotePage": {
     "title": "Request a Quote",
     "description": "Fill out the form below to receive a personalized quote for pressure washing services.",

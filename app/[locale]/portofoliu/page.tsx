@@ -3,12 +3,11 @@
 import { useState } from 'react';
 import TestimonialCard from '@/components/TestimonialCard';
 import { Button } from '@/components/ui/button';
+import { useTranslations } from 'next-intl';
 
 interface GalleryItem {
-  id: number;
+  id: string;
   category: string;
-  title: string;
-  location: string;
 }
 
 interface Testimonial {
@@ -18,40 +17,7 @@ interface Testimonial {
   service: string;
 }
 
-const galleryItems: GalleryItem[] = [
-  { id: 1, category: 'alei', title: 'Alee Pavaj Premium', location: 'București' },
-  { id: 2, category: 'pereti', title: 'Zid de Gardă Modern', location: 'Cluj-Napoca' },
-  { id: 3, category: 'terase', title: 'Terasă Design', location: 'Timișoara' },
-  { id: 4, category: 'comercial', title: 'Parcare Comercială', location: 'Iași' },
-  { id: 5, category: 'alei', title: 'Alee Grădină', location: 'Brașov' },
-  { id: 6, category: 'pereti', title: 'Zid Piatra Naturală', location: 'Sibiu' },
-  { id: 7, category: 'terase', title: 'Terasă Piscină', location: 'Constanța' },
-  { id: 8, category: 'comercial', title: 'Spațiu Expozițional', location: 'București' },
-  { id: 9, category: 'alei', title: 'Alee Curte', location: 'Oradea' },
-];
-
-const testimonials: Testimonial[] = [
-  {
-    name: 'Andrei Popescu',
-    rating: 5,
-    review: 'Echipa a fost excepțională. Aleea din curtea noastră arată impecabil!',
-    service: 'Instalare Alei'
-  },
-  {
-    name: 'Maria Ionescu',
-    rating: 5,
-    review: 'Terminat rapid și profesional. Recomand cu încredere!',
-    service: 'Zid de Gardă'
-  },
-  {
-    name: 'Cristian Dumitrescu',
-    rating: 5,
-    review: 'Terasa este exact așa cum am visat. Calitate excelentă!',
-    service: 'Terasă Premium'
-  }
-];
-
-const categories = ['toate', 'alei', 'pereti', 'terase', 'comercial'];
+const categoryKeys = ['all', 'alei', 'pereți', 'terase', 'comercial'];
 
 const categoryEmojis: Record<string, string> = {
   alei: '🛣️',
@@ -60,20 +26,51 @@ const categoryEmojis: Record<string, string> = {
   comercial: '🏢'
 };
 
-const categoryTitles: Record<string, string> = {
-  toate: 'Toate',
-  alei: 'Alei',
-  pereti: 'Pereți',
-  terase: 'Terase',
-  comercial: 'Comercial'
-};
-
 export default function PortfolioPage() {
-  const [selectedCategory, setSelectedCategory] = useState('toate');
+  const t = useTranslations('portfolio');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const filteredItems = selectedCategory === 'toate'
-    ? galleryItems
-    : galleryItems.filter(item => item.category === selectedCategory);
+  const galleryItems: GalleryItem[] = categoryKeys.slice(1).map(category => ({
+    id: category,
+    category
+  }));
+
+  const testimonials: Testimonial[] = [
+    {
+      name: t.raw('testimonials.reviews.andrei.name'),
+      rating: 5,
+      review: t.raw('testimonials.reviews.andrei.review'),
+      service: t.raw('testimonials.reviews.andrei.service')
+    },
+    {
+      name: t.raw('testimonials.reviews.maria.name'),
+      rating: 5,
+      review: t.raw('testimonials.reviews.maria.review'),
+      service: t.raw('testimonials.reviews.maria.service')
+    },
+    {
+      name: t.raw('testimonials.reviews.cristian.name'),
+      rating: 5,
+      review: t.raw('testimonials.reviews.cristian.review'),
+      service: t.raw('testimonials.reviews.cristian.service')
+    }
+  ];
+
+  const filteredItems = selectedCategory === 'all'
+    ? galleryItems.flatMap(item =>
+      Array.from({ length: 3 }, (_, i) => ({ id: `${item.id}-${i}`, category: item.id, index: i }))
+    )
+    : galleryItems.flatMap(item =>
+      Array.from({ length: 3 }, (_, i) => ({ id: `${item.id}-${i}`, category: item.id, index: i }))
+    ).filter(item => item.category === selectedCategory);
+
+  const filteredItemsSimple = selectedCategory === 'all'
+    ? Array.from({ length: 9 }, (_, i) => ({ id: String(i + 1), category: i < 3 ? 'alei' : i < 6 ? 'pereți' : i < 9 ? 'terase' : 'comercial' }))
+    : Array.from({ length: 9 }, (_, i) => {
+        const cat = i < 3 ? 'alei' : i < 6 ? 'pereți' : i < 9 ? 'terase' : 'comercial';
+        return { id: String(i + 1), category: cat };
+      })
+      .filter(item => item.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-12 px-4">
@@ -81,30 +78,30 @@ export default function PortfolioPage() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
-            Portofoliu
+            {t('hero.title')}
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Descoperiți proiectele noastre de pavaj și amenajări exterioare realizate cu profesionalism și atenție la detalii.
+            {t('hero.description')}
           </p>
         </div>
 
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((category) => (
+          {categoryKeys.map((category) => (
             <Button
               key={category}
               variant={selectedCategory === category ? 'default' : 'outline'}
               onClick={() => setSelectedCategory(category)}
               className="min-w-[100px]"
             >
-              {categoryTitles[category]}
+              {t(`categories.${category}` as any)}
             </Button>
           ))}
         </div>
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {filteredItems.map((item) => (
+          {filteredItemsSimple.map((item) => (
             <div
               key={item.id}
               className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
@@ -114,10 +111,10 @@ export default function PortfolioPage() {
               </div>
               <div className="p-4">
                 <h3 className="font-semibold text-lg text-gray-900 mb-1">
-                  {item.title}
+                  {t(`gallery.items.${item.id}.title` as any)}
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  📍 {item.location}
+                  📍 {t(`gallery.items.${item.id}.location` as any)}
                 </p>
               </div>
             </div>
@@ -127,7 +124,7 @@ export default function PortfolioPage() {
         {/* Testimonials Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
-            Ce spun clienții noștri
+            {t('testimonials.title')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
@@ -145,7 +142,7 @@ export default function PortfolioPage() {
         {/* CTA Button */}
         <div className="text-center">
           <Button size="lg" className="text-lg px-8 py-6">
-            Solicitați o Ofertă Gratuită
+            {t('cta.button')}
           </Button>
         </div>
       </div>

@@ -376,6 +376,218 @@
       "button": "Solicită o Ofertă"
     }
   },
+  "about": {
+    "hero": {
+      "title": "Despre Noi",
+      "description": "Suntem dedicați să transformăm spațiile exterioare în opere de artă funcțională, cu profesionalism și atenție la fiecare detaliu."
+    },
+    "story": {
+      "title": "Povestea Noastră",
+      "subtitle": "De la o pasiune la o afacere de succes",
+      "paragraph1": "Povestea noastră a început în urmă cu mai mulți ani, când am descoperit pasiunea pentru transformarea spațiilor exterioare. Ceea ce a început ca un proiect personal s-a transformat într-o afacere de familie, construită pe încredere, calitate și satisfacerea clienților.",
+      "paragraph2": "De-a lungul anilor, am completat sute de proiecte, de la simple alei de grădină până la spații comerciale complexe. Fiecare proiect ne-a învățat ceva nou și ne-a ajutat să ne perfecționăm meșteșugul.",
+      "paragraph3": "Astăzi, suntem mândri să fim partenerul de încredere pentru clienții din toată țara, oferind servicii de pavaj și amenajări exterioare care depășesc așteptările clienților."
+    },
+    "whyChooseUs": {
+      "title": "De Ce Să Ne Alegeți",
+      "quality": {
+        "title": "Calitate",
+        "description": "Folosim doar materiale premium și tehnici dovedite pentru rezultate durabile."
+      },
+      "punctuality": {
+        "title": "Punctualitate",
+        "description": "Respectăm termenele limită și livrăm proiectele la timp, fără excepții."
+      },
+      "professionalism": {
+        "title": "Profesionalism",
+        "description": "Echipa noastră este formată din experți cu ani de experiență în domeniu."
+      },
+      "transparency": {
+        "title": "Transparență",
+        "description": "Oferte clare, fără costuri ascunse și comunicare deschisă pe tot parcursul proiectului."
+      }
+    },
+    "values": {
+      "title": "Valorile Noastre",
+      "excellence": {
+        "title": "Excelență",
+        "description": "Ne angajăm să depășim așteptările clienților noștri prin calitate superioară în fiecare aspect al muncii noastre."
+      },
+      "integrity": {
+        "title": "Integritate",
+        "description": "Operăm cu onestitate și transparență în toate relațiile noastre de afaceri, construind încredere pe termen lung."
+      },
+      "innovation": {
+        "title": "Inovație",
+        "description": "Îmbrățișăm tehnologii și tehnici noi pentru a oferi soluții moderne și eficiente pentru nevoile clienților."
+      },
+      "sustainability": {
+        "title": "Sustenabilitate",
+        "description": "Ne preocupăm de mediu și folosim materiale și practici durabile oriunde este posibil în proiectele noastre."
+      }
+    },
+    "team": {
+      "title": "Echipa și Echipamentele Noastre",
+      "description": "Echipa noastră profesionistă, cu echipamente moderne și de ultimă generație, este pregătită să preia orice proiect."
+    },
+    "cta": {
+      "title": "Gata să Începem Proiectul Dvs.?",
+      "description": "Contactați-ne astăzi pentru o consultanță gratuită și o ofertă personalizată.",
+      "button": "Contactați-ne"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contactează-ne",
+      "description": "Suntem aici să te ajutăm cu orice întrebare sau să îți oferim o ofertă personalizată."
+    },
+    "info": {
+      "phone": {
+        "title": "Telefon",
+        "description": "Sună-ne pentru o ofertă rapidă",
+        "number": "+40 712 345 678",
+        "availability": "Disponibil Luni-Vineri<br />8:00 - 18:00"
+      },
+      "email": {
+        "title": "Email",
+        "description": "Trimite-ne un email oricând",
+        "address": "contact@example.com",
+        "responseTime": "Răspuns în maxim 24 de ore"
+      },
+      "location": {
+        "title": "Locație",
+        "description": "Zona de acoperire",
+        "area": "Iași și zonele învecinate",
+        "details": "Acoperim județul Iași<br />și localitățile apropiate"
+      }
+    },
+    "workingHours": {
+      "title": "Program de Lucru",
+      "mondayFriday": "Luni - Vineri",
+      "saturday": "Sâmbătă",
+      "sunday": "Duminică",
+      "closed": "Închis",
+      "emergencyNote": "Pentru urgențe în afara programului, ne puteți suna pentru a stabili o programare specială."
+    },
+    "whatHappens": {
+      "title": "Ce Se Întâmplă După Ce Ne Contactezi?",
+      "steps": {
+        "1": {
+          "title": "Contact",
+          "description": "Ne contactezi prin telefon, email sau formularul de ofertă."
+        },
+        "2": {
+          "title": "Ofertă",
+          "description": "Îți pregătim o ofertă personalizată în maximum 24 de ore."
+        },
+        "3": {
+          "title": "Execuție",
+          "description": "Programăm și executăm lucrarea profesional și în timp util."
+        }
+      }
+    },
+    "whyChooseUs": {
+      "title": "De Ce Să Ne Alegeți?",
+      "fastResponse": {
+        "title": "Răspuns Rapid",
+        "description": "Răspundem la cereri în maximum 24 de ore"
+      },
+      "transparentOffers": {
+        "title": "Oferte Transparente",
+        "description": "Prețuri clare, fără costuri ascunse"
+      },
+      "warranty": {
+        "title": "Garanție",
+        "description": "Oferim garanție pentru toate serviciile"
+      },
+      "professionalism": {
+        "title": "Profesionalism",
+        "description": "Echipă cu peste 10 ani de experiență"
+      }
+    },
+    "cta": {
+      "title": "Gata să Transformi Spațiul Tău?",
+      "description": "Contactează-ne astăzi pentru o ofertă gratuită și vezi cum putem face diferența.",
+      "quoteButton": "Solicită o Ofertă Gratuită",
+      "callButton": "Sună Acum"
+    }
+  },
+  "portfolio": {
+    "hero": {
+      "title": "Portofoliu",
+      "description": "Descoperiți proiectele noastre de pavaj și amenajări exterioare realizate cu profesionalism și atenție la detalii."
+    },
+    "categories": {
+      "all": "Toate",
+      "alei": "Alei",
+      "pereți": "Pereți",
+      "terase": "Terase",
+      "comercial": "Comercial"
+    },
+    "gallery": {
+      "items": {
+        "1": {
+          "title": "Alee Pavaj Premium",
+          "location": "București"
+        },
+        "2": {
+          "title": "Zid de Grădină Modern",
+          "location": "Cluj-Napoca"
+        },
+        "3": {
+          "title": "Terasă Design",
+          "location": "Timișoara"
+        },
+        "4": {
+          "title": "Parcare Comercială",
+          "location": "Iași"
+        },
+        "5": {
+          "title": "Alee Grădină",
+          "location": "Brașov"
+        },
+        "6": {
+          "title": "Perete Piatră Natural",
+          "location": "Sibiu"
+        },
+        "7": {
+          "title": "Terasă Piscină",
+          "location": "Constanța"
+        },
+        "8": {
+          "title": "Spațiu Expozițional",
+          "location": "București"
+        },
+        "9": {
+          "title": "Alee Curată",
+          "location": "Oradea"
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Ce spun clienții noștri",
+      "reviews": {
+        "andrei": {
+          "name": "Andrei Popescu",
+          "review": "Echipa a fost excepțională. Aleea din curtea noastră arată impecabil!",
+          "service": "Instalare Alei"
+        },
+        "maria": {
+          "name": "Maria Ionescu",
+          "review": "Terminat rapid și profesional. Recomand cu încredere!",
+          "service": "Zid de Grădină"
+        },
+        "cristian": {
+          "name": "Cristian Dumitrescu",
+          "review": "Terasa este exact așa cum am visat. Calitate excelentă!",
+          "service": "Terasă Premium"
+        }
+      }
+    },
+    "cta": {
+      "button": "Solicită o Ofertă Gratuită"
+    }
+  },
   "quotePage": {
     "title": "Solicită o Ofertă",
     "description": "Completează formularul de mai jos pentru a primi o ofertă personalizată pentru serviciile de curățare cu presiune.",
