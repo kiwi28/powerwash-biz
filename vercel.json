@@ -2,19 +2,9 @@
   "buildCommand": "pnpm build",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "env": {
-    "PAYLOAD_SECRET": "@payload_secret",
-    "DATABASE_URL": "@database_url",
-    "RESEND_API_KEY": "@resend_api_key",
-    "ADMIN_EMAIL": "@admin_email",
-    "FROM_EMAIL": "@from_email",
-    "NEXT_PUBLIC_SITE_URL": "@site_url"
-  },
+  "env": {},
   "build": {
-    "env": {
-      "PAYLOAD_SECRET": "@payload_secret",
-      "DATABASE_URL": "@database_url"
-    }
+    "env": {}
   },
   "headers": [
     {
