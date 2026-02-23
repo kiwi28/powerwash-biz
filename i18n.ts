@@ -5,7 +5,7 @@ export const defaultLocale = 'ro' as const;
 
 export default getRequestConfig(async ({ locale }) => {
   return {
-    locale: locale || 'en',
+    locale: locale || 'ro',
     messages: (await import(`./messages/${locale}.json`)).default
   };
 });

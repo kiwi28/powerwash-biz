@@ -47,7 +47,11 @@
       "Bash(npx tsc --noEmit 2>&1 | head -10)",
       "Bash(npm run build 2>&1 | head -30)",
       "Bash(npm run build 2>&1 | head -20)",
-      "Bash(npm run build 2>&1 | tail -20)"
+      "Bash(npm run build 2>&1 | tail -20)",
+      "mcp__next-devtools__nextjs_index",
+      "mcp__next-devtools__nextjs_call",
+      "mcp__plugin_playwright_playwright__browser_console_messages",
+      "Bash(ls -la /home/alexkiwi/projects/personal/agentic-next-payloadcms/app/[locale]/)"
     ]
   },
   "enableAllProjectMcpServers": true,

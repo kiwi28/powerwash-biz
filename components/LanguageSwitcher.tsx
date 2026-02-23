@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { locales } from '@/i18n';
+import { useEffect } from 'react';
 
 type Locale = typeof locales[number];
 
@@ -18,7 +19,7 @@ export default function LanguageSwitcher() {
   // Get the other locale
   const otherLocale: Locale = currentLocale === 'ro' ? 'en' : 'ro';
 
-  // Get the path without locale prefix (only for English URLs)
+  // Get the path without locale prefix
   let pathWithoutLocale = pathname;
   if (currentLocale === 'en') {
     pathWithoutLocale = pathname.replace('/en', '') || '/';
@@ -32,6 +33,13 @@ export default function LanguageSwitcher() {
     en: 'EN',
   };
 
+  // Set cookie when clicking the language toggle
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    document.cookie = `NEXT_LOCALE=${otherLocale}; path=/; max-age=31536000; SameSite=lax`;
+    window.location.href = targetUrl;
+  };
+
   return (
     <Button
       variant="ghost"
@@ -40,7 +48,7 @@ export default function LanguageSwitcher() {
       className="flex items-center space-x-1"
       aria-label={`Switch to ${otherLocale === 'ro' ? 'Romanian' : 'English'}`}
     >
-      <Link href={targetUrl}>
+      <Link href={targetUrl} onClick={handleClick}>
         <Globe className="h-4 w-4" />
         <span className="font-medium">{localeLabels[currentLocale]}</span>
       </Link>
