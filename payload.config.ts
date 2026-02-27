@@ -7,9 +7,13 @@ import { QuoteRequests } from './payload/collections/QuoteRequests'
 import { GalleryItems } from './payload/collections/GalleryItems'
 import { Testimonials } from './payload/collections/Testimonials'
 import { Services } from './payload/collections/Services'
+import { Users } from './payload/collections/Users'
 import { SiteSettings } from './payload/globals/SiteSettings'
 
 export default buildConfig({
+  admin: {
+    user: Users.slug,
+  },
   editor: lexicalEditor({}),
   db: mongooseAdapter({
     url: process.env.DATABASE_URL!,
@@ -23,7 +27,7 @@ export default buildConfig({
     defaultLocale: 'ro',
     fallback: true,
   },
-  collections: [QuoteRequests, GalleryItems, Testimonials, Services],
+  collections: [Users, QuoteRequests, GalleryItems, Testimonials, Services],
   globals: [SiteSettings],
   secret: process.env.PAYLOAD_SECRET!,
 })

@@ -37,8 +37,9 @@ export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
   const segments = pathname.split('/').filter(Boolean);
 
-  // Skip middleware for API routes, static files, etc.
+  // Skip middleware for admin routes, API routes, static files, etc.
   if (
+    pathname.startsWith('/admin') ||
     pathname.startsWith('/api') ||
     pathname.startsWith('/_next') ||
     pathname.startsWith('/favicon.ico') ||
@@ -80,8 +81,8 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  // Match all routes except API routes, static files, and Next.js internals
+  // Match all routes except admin, API routes, static files, and Next.js internals
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)',
+    '/((?!admin|api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)',
   ],
 };
